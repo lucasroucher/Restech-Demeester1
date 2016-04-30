@@ -9,6 +9,7 @@
     "package:win": "electron-packager . \"Restech DataView\" --platform=win32 --arch=x64 --overwrite"
   },
   "dependencies": {
+    "electron-debug": "^0.7.0",
     "lodash": "^4.11.1"
   },
   "devDependencies": {
