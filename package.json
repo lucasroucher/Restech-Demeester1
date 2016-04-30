@@ -1,15 +1,18 @@
 {
-  "name": "rephluxor3",
+  "name": "restech-dataview",
   "private": true,
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
-  },
-  "devDependencies": {
-    "electron-prebuilt": "^0.37.8"
+    "start": "electron main.js",
+    "package:mac": "electron-packager . \"Restech DataView\" --platform=darwin --arch=x64 --overwrite",
+    "package:win": "electron-packager . \"Restech DataView\" --platform=win32 --arch=x64 --overwrite"
   },
   "dependencies": {
     "lodash": "^4.11.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.0.1",
+    "electron-prebuilt": "^0.37.8"
   }
 }

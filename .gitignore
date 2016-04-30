@@ -1,3 +1,4 @@
-/node_modules
 /log.txt
+/node_modules
+/Restech DataView-*
 .DS_Store
