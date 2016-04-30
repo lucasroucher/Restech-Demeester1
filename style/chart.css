@@ -1,0 +1,68 @@
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+svg * {
+  vector-effect: non-scaling-stroke;
+}
+
+svg {
+  border: 1px solid #DDD;
+  /* border-radius: 4px; */
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.severity { opacity: 0.5; }
+
+.htick, .vtick {
+  opacity: 0.25;
+}
+
+/* The actual line that plots the values. */
+.line {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.flag {
+  opacity: 1.0;
+}
+
+.cur {
+  opacity: 0.5;
+}
+
+.sel {
+    opacity: 0.5;
+}
+
+/* Overlay on top of all of the above for catching mouse events. */
+.overlay {
+    opacity: 0; /* Can't see anything underneath it without this. */
+}
+
+#legend .box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #666;
+}
+
+#reportChart {
+  font-weight: normal;
+}
+
+#reportChart, #acidChart {
+  margin-left: 0;
+}

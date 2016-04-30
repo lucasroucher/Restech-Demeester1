@@ -1,0 +1,27 @@
+.line { stroke: steelblue; }
+
+.normal   { fill: #bff5bf; }
+.mild     { fill: #f5f598; }
+.moderate { fill: #e0e055; }
+.severe   { fill: #edacab; }
+
+.upright   { fill: #98abc5 !important; background: #98abc5 !important; }
+.meal      { fill: #0000ff !important;   background: #0000ff !important; }
+.supine    { fill: #19d1d1 !important;   background: #19d1d1 !important; }
+.cough     { fill: #55f505 !important; background: #55f505 !important; }
+.heartburn { fill: #000000 !important;  background: #000000 !important; }
+.symptom1  { fill: #ff0000 !important;    background: #ff0000 !important; }
+.symptom2  { fill: #002e00 !important;  background: #002e00 !important; }
+.symptom3  { fill: #9b30ff !important; background: #9b30ff !important; }
+
+.gt75 { fill: yellow !important; background: yellow !important; }
+.gt90 { fill: red !important; background: red !important; }
+
+.cur {
+  stroke: #00c;
+  fill: #009;
+}
+
+.sel { fill: #666; }
+
+.htick, .vtick { stroke: light grey; }

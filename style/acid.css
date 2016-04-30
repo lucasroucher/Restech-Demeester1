@@ -1,0 +1,18 @@
+#acidChart {
+  font-weight: normal;
+}
+
+#acidChart .axis path,
+#acidChart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#acidChart .bar {
+  fill: steelblue;
+}
+
+#acidChart .x.axis path {
+  display: none;
+}

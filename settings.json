@@ -1,0 +1,52 @@
+{
+  "dataDir": "/Users/jason/Dropbox/Work/Omannan/Rephluxor2/MyArchive",
+  "name": "Name",
+  "address": "Address",
+  "city": "City",
+  "state": "State",
+  "zip": "Zip",
+  "phone": "tel: (xxx) xxx-xxxx fax: (xxx) xxx-xxxx",
+  "acidNormals": {
+    "upright": [
+      0.123,
+      null,
+      null,
+      null
+    ],
+    "supine": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "acidNormals75": {
+    "upright": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "supine": [
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "colors": {
+    "normal": "#bff5bf",
+    "mild": "#f5f598",
+    "moderate": "#e0e055",
+    "severe": "#edacab",
+    "meal": "#0000ff",
+    "supine": "#19d1d1",
+    "cough": "#55f505",
+    "heartburn": "#000000",
+    "symptom1": "#ff0000",
+    "symptom2": "#002e00",
+    "symptom3": "#9b30ff"
+  },
+  "minEventTime": 10,
+  "endEventThreshold": 0.1
+}

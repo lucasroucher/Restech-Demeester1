@@ -1,0 +1,15 @@
+
+#report-top-section {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.report-mid-details th, .report-mid-details td {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.report-right th, .report-right td {
+    font-size: 12px;
+    line-height: 14px;
+}

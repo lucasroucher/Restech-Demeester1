@@ -1,0 +1,141 @@
+#report {
+}
+
+#report-top-section table {
+
+}
+
+#report-mid-section {
+    margin-top: 10px;
+}
+
+#report-bot-section {
+    margin-top: 10px;
+}
+
+#report-bot-section table {
+    font-size: 10px;
+}
+
+#report-bot-section > .left {
+    padding-right: 5px;
+}
+
+#report-bot-section > .right {
+    padding-left: 5px;
+}
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: .31in .31in .31in .31in;  
+}
+@media print {
+    
+    /* Bootstrap clears all background colors when printing so add them back. */
+    #report th.header {
+        background: rgb(156, 200, 255) !important;
+    }
+}
+
+.equal-height, .equal-height > div[class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+#report .equal-height > .col-xs-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#report .equal-height > .col-xs-4:first-child {
+    padding-left: 15px;
+}
+
+#report .equal-height > .col-xs-4:last-child {
+    padding-right: 15px;
+}
+
+#report .panel {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#report .panel-body {
+    padding: 10px;
+    padding-top: 5px;
+}
+
+#report .patient-details .form-group {
+    margin-bottom: 0;
+}
+
+#report label {
+    white-space: nowrap;
+    margin-top: -1px;
+}
+
+#report .patient-details {
+    font-size: 10px;
+}
+
+#report .patient-details .form-group > div {
+    padding-left: 0;
+}
+
+#report .patient-details .form-group .form-control-static {
+    padding-top: 2px;
+    padding-bottom: 0;
+}
+
+#report .patient-details .form-group label {
+    padding-top: 2px;
+    text-align: right;
+}
+
+#mealsRemoved {
+    text-align: left !important;
+}
+
+#report .report-table tbody {
+    border: 1px solid #DDD;
+    /* border-radius: 4px; */
+}
+
+#report .report-table tbody.separator {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+#report .report-table, #report .report-chart {
+    margin-bottom: 10px;
+}
+
+#report .panel {
+    border-radius: 0;
+}
+
+#report textarea {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 10px;
+    height: 40px;
+}
+
+#report-signature {
+    margin-top: 10px;
+    display: flex;
+}
+
+#report-signature .sig {
+    flex-basis: 10%;
+}
+
+#report-signature .underlined {
+    flex-grow: 1;
+    border-bottom: 1px #ddd solid;
+}

@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "electron-prebuilt": "^0.37.8"
+  },
+  "dependencies": {
+    "lodash": "^4.11.1"
   }
 }

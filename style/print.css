@@ -1,0 +1,17 @@
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar, #toolbar, .no-print {
+    display: none;
+}
+
+@media print {
+    @page {
+        size: auto;
+    }
+    #main {
+        width: 100% !important;
+    }
+}

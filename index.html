@@ -1,19 +1,1091 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<html style="overflow: auto;">
+<head>
+    <meta charset="utf-8">
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+    <title>Restech DataView</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.css">
+    <link rel="stylesheet" href="lib/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" href="style/page.css">
+    <link rel="stylesheet" href="style/chart.css">
+    <link rel="stylesheet" href="style/acid.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/colors.css">
+    <link rel="stylesheet" href="style/report.css">
+    <link rel="stylesheet" href="style/print.css" media="print">
+</head>
+<body class="before-ready">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Restech DataView</a>
+                <!-- <p class="navbar-text pull-right"><i class="icon-spinner icon-spin"></i>&nbsp;</p> -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarLinks">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbarLinks" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav hide-before-ready">
+                    <li><a href="#newModal" data-toggle="modal">New</a></li>
+                    <li><a id="retrieveLink" href="#retrieveModal" data-toggle="modal" title="Retrieve study from data card">Retrieve</a></li>
+                    <li><a id="openLink" href="#openModal" data-toggle="modal" title="Open saved study">Open</a></li>
+                    <li><a href="#" data-cmd="print">Print Preview</a></li>
+                    <li class="report-hide"><a href="#" data-cmd="showReport">Report</a></li>
+                    <li class="report-only hide"><a href="#" data-cmd="hideReport">Graph</a></li>
+                    <li><a href="#" data-cmd="saveFile" title="Save study to disk">Save</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#settingsModal" data-toggle="modal">Settings</a></li>
+                    <li class="hidden-sm hidden-md hidden-lg"><a href="#helpModal" data-toggle="modal">Help</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#settingsModal" data-toggle="modal">Settings</a></li>
+                            <li><a href="#helpModal" data-toggle="modal">Help</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="chart" class="hide">
+        <div class="container">
+            <h4 id="patientName" class="text-center">Patient Name</h4>
+
+            <div id="toolbar" class="text-center">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <div class="btn-group">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Add period to pH data in a range" type="button">
+                                <i class="glyphicon glyphicon-edit"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-cmd="add" data-type="meal" data-val="2">Meal</a></li>
+                                <li><a href="#" data-cmd="add" data-type="supine" data-val="4">Supine</a></li>
+                                <li><a href="#" data-cmd="add" data-type="symptom" data-val="1">Cough</a></li>
+                                <li><a href="#" data-cmd="add" data-type="symptom" data-val="3">Heartburn</a></li>
+                                <li><a href="#" data-cmd="add" data-type="symptom" data-val="5" class="symptom1name">Symptom 1</a></li>
+                                <li><a href="#" data-cmd="add" data-type="symptom" data-val="6" class="symptom2name">Symptom 2</a></li>
+                                <li><a href="#" data-cmd="add" data-type="symptom" data-val="7" class="symptom3name">Symptom 3</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Clear periods from pH data in a range" type="button">
+                                <i class="glyphicon glyphicon-remove"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-cmd="clear" data-type="meal" data-val="2">Meal</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="supine" data-val="4">Supine</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="symptom" data-val="1">Cough</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="symptom" data-val="3">Heartburn</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="symptom" data-val="5" class="symptom1name">Symptom 1</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="symptom" data-val="6" class="symptom2name">Symptom 2</a></li>
+                                <li><a href="#" data-cmd="clear" data-type="symptom" data-val="7" class="symptom3name">Symptom 3</a></li>
+                                <li><a href="#" data-cmd="clearAll">All</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-default tip" data-cmd="del" title="Delete pH data and periods in a range" type="button"><i class="glyphicon glyphicon-trash"></i></button>
+                        <button class="btn btn-default tip" data-cmd="undo" title="Undo the last undoable command" type="button"><i class="fa fa-undo"></i></button>
+                        <button class="btn btn-default tip" data-cmd="zoomIn" title="Zoom in on pH data in selected range" type="button"><i class="glyphicon glyphicon-zoom-in"></i></button>
+                        <button class="btn btn-default tip" data-cmd="zoomOut" title="Zoom out" type="button"><i class="glyphicon glyphicon-zoom-out"></i></button>
+                        <div class="btn-group">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Adjust pH scale" type="button">
+                                <i class="glyphicon glyphicon-resize-vertical"></i>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-cmd="zoomY" data-from="4" data-to="8.5">4 to 8.5</a></li>
+                                <li><a href="#" data-cmd="zoomY" data-from="0" data-to="10">0 to 10</a></li>
+                                <li><a href="#" data-cmd="customZoomY">Custom</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="info" class="row">
+                <div id="start" class="col-xs-3 text-left"></div>
+                <div id="message" class="col-xs-6 text-center"></div>
+                <div id="end" class="col-xs-3 text-right"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="main" style="width: 100% !important;">
+                        <div class="width: 100%">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="legend" class="text-center">
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-2">
+                        <button class="no-print btn btn-default btn-xs" data-cmd="flagDelMeals">Delete Meals</button>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="meal" checked> <span class="box meal"></span> Meal</label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="supine" checked> <span class="box supine"></span> Supine</label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="cough" checked> <span class="box cough"></span> Cough</label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="heartburn" checked> <span class="box heartburn"></span> HB</label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="symptom1" checked> <span class="box symptom1"></span> <span class="symptom1name">Symptom 1</span></label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="symptom2" checked> <span class="box symptom2"></span> <span class="symptom2name">Symptom 2</span></label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag="symptom3" checked> <span class="box symptom3"></span> <span class="symptom3name">Symptom 3</span></label>
+                    </div>
+                    <div class="col-xs-1">
+                        <label><input type="checkbox" data-flag-all checked> All</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="selInfo" class="text-center"></div>
+        </div>
+    </div>
+
+    <div id="report" class="hide">
+        <div class="container">
+            <div id="report-top-section" class="row equal-height">
+                <div class="col-xs-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body text-center">
+                            <p><img class="custom-img"></p>
+                            <div class="custom-line1"></div>
+                            <div class="custom-line2"></div>
+                            <div class="custom-line3"></div>
+                            <div class="custom-line4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p><img src="img/Restech_logo.jpg"></p>
+                            <!--<div>www.restech.com</div>
+                            <div>ph: 800.352.1512 - fx: 858.673.3782</div>-->
+                            <form class="form-horizontal patient-details">
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Indication</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-indications"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Antireflux Med.</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-armeds"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Study Duration</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-dur"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label id="mealsRemoved" class="col-xs-12 control-label">Meals Removed From Calculations</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form class="form-horizontal patient-details">
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Last Name</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-lastName">Smith</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">First Name</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-firstName">John</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Study Date</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-date">04-01-74</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Patient #</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-patientNumber">5114801</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">D.O.B.</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-dob">04-01-74</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Investigator</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-physician">Jeffrey Gallups, MD</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-xs-5 control-label">Referred By</label>
+                                    <div class="col-xs-7">
+                                        <p class="form-control-static study-refPhysician">Primary Care, MD</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="report-mid-section" class="row">
+                <div class="col-xs-12">
+                    <div id="reportChart" style="height: 260px;"></div>
+                </div>
+            </div>
+
+            <div id="report-bot-section" class="row">
+                <div class="left col-xs-7">
+                    <div class="report-table">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th class="table-title" colspan="2">EVENT CALCULATIONS</th>
+                                    <th class="header">pH &lt; 6.5</th>
+                                    <th class="header">pH &lt; 6.0</th>
+                                    <th class="header">pH &lt; 5.5</th>
+                                    <th class="header">pH &lt; 5.0</th>
+                                </tr>
+                                <tr class="total">
+                                    <th colspan="2">Total time of all pH events (hh:mm)</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="total-percent">
+                                    <th colspan="2">Total % pH below baseline pH</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="total-upright">
+                                    <th colspan="2">Total time below baseline pH, upright</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="total-percent-upright">
+                                    <th colspan="2">Total % pH below baseline, upright</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="total-supine">
+                                    <th colspan="2">Total time below baseline pH, supine</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="total-percent-supine">
+                                    <th colspan="2">Total % below baseline pH, supine</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="longest">
+                                    <th colspan="2">Longest time of a pH event</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="gt5">
+                                    <th colspan="2">Number of events > 5 minutes</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="totevent">
+                                    <th colspan="2">Total Number of Events</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tbody class="separator">
+                                <tr><td colspan="6"></td></tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="table-title">SYMPTOM CORRELATION</th>
+                                    <th class="header">TOTAL</th>
+                                    <th class="header">pH &lt; 6.5</th>
+                                    <th class="header">pH &lt; 6.0</th>
+                                    <th class="header">pH &lt; 5.5</th>
+                                    <th class="header">pH &lt; 5.0</th>
+                                </tr>
+                                <tr>
+                                    <th>cough</th>
+                                    <td class="sym-tot-cough">?</td>
+                                    <td class="sym-cor-cough-65">?</td>
+                                    <td class="sym-cor-cough-60">?</td>
+                                    <td class="sym-cor-cough-55">?</td>
+                                    <td class="sym-cor-cough-50">?</td>
+                                </tr>
+                                <tr>
+                                    <th>heartburn</th>
+                                    <td class="sym-tot-heart">?</td>
+                                    <td class="sym-cor-heart-65">?</td>
+                                    <td class="sym-cor-heart-60">?</td>
+                                    <td class="sym-cor-heart-55">?</td>
+                                    <td class="sym-cor-heart-50">?</td>
+                                </tr>
+                                <tr>
+                                    <th class="symptom1name">throat clearing</th>
+                                    <td class="sym-tot-custom1">?</td>
+                                    <td class="sym-cor-custom1-65">?</td>
+                                    <td class="sym-cor-custom1-60">?</td>
+                                    <td class="sym-cor-custom1-55">?</td>
+                                    <td class="sym-cor-custom1-50">?</td>
+                                </tr>
+                                <tr>
+                                    <th class="symptom2name">globus</th>
+                                    <td class="sym-tot-custom2">?</td>
+                                    <td class="sym-cor-custom2-65">?</td>
+                                    <td class="sym-cor-custom2-60">?</td>
+                                    <td class="sym-cor-custom2-55">?</td>
+                                    <td class="sym-cor-custom2-50">?</td>
+                                </tr>
+                                <tr>
+                                    <th class="symptom3name">burp</th>
+                                    <td class="sym-tot-custom3">?</td>
+                                    <td class="sym-cor-custom3-65">?</td>
+                                    <td class="sym-cor-custom3-60">?</td>
+                                    <td class="sym-cor-custom3-55">?</td>
+                                    <td class="sym-cor-custom3-50">?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="right col-xs-5">
+                    <div id="acidChart" class="report-chart" style="height: 226px;"></div>
+
+                    <div class="report-table">
+                        <table class="table table-condensed">
+                           <!-- <tr>
+                                <th colspan="2" class="table-title">RYAN Score</th>
+                            </tr> -->
+                            <tr>
+                                <th colspan="2" class="not_mapped_style" style="text-align:center">RYAN Score Upright</th>
+                            </tr>
+                            <tr>
+                                <th class="header">Patient's Value</th>
+                                <th class="header">Normal Value</th>
+                            </tr>
+                            <tr>
+                                <td class="ryan-upright">?</td>
+                                <td>&lt; 9.41</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="not_mapped_style" style="text-align:center">RYAN Score Supine</th>
+                            </tr>
+                            <tr>
+                                <th class="header">Patient's Value</th>
+                                <th class="header">Normal Value</th>
+                            </tr>
+                            <tr>
+                                <td class="ryan-supine">?</td>
+                                <td>&lt; 6.8</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="report-signature">
+                         <span class="sig">Signature:</span>
+                         <span class="underlined">&nbsp;</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="report-bot-section" class="row">
+              <div class="left col-xs-12">
+                <textarea id="notes-area" class="form-control" placeholder="Notes" row="7"></textarea>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="newModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">New Study</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#patientDetails" data-toggle="tab">Patient Details</a></li>
+                        <li><a href="#customSymptoms" data-toggle="tab">Custom Symptoms</a></li>
+                        <li><a href="#studyDetails" data-toggle="tab">Study Details</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="patientDetails" class="tab-pane active">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="lastName" class="col-sm-3 control-label">Last Name *</label>
+                                    <div class="col-sm-9">
+                                        <input id="lastName" type="text" class="form-control"  maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstName" class="col-sm-3 control-label">First Name *</label>
+                                    <div class="col-sm-9">
+                                        <input id="firstName" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="study-dd" class="col-sm-3 control-label">Study Date *</label>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <select id="study-dd" class="date-dd form-control">
+                                                    <option value="NaN" label="dd">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <select id="study-mm" class="date-mm form-control">
+                                                    <option value="NaN" label="mm">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <select id="study-yyyy" class="date-yyyy form-control">
+                                                    <option value="NaN" label="yyyy">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="patientID" class="col-sm-3 control-label">Patient ID</label>
+                                    <div class="col-sm-9">
+                                        <input id="patientID" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthdate-dd" class="col-sm-3 control-label">Birthdate</label>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <select id="birthdate-dd" class="date-dd form-control">
+                                                    <option value="NaN" label="dd">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <select id="birthdate-mm" class="date-mm form-control">
+                                                    <option value="NaN" label="mm">
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <select id="birthdate-yyyy" class="date-yyyy form-control">
+                                                    <option value="NaN" label="yyyy">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender" class="col-sm-3 control-label">Gender</label>
+                                    <div class="col-sm-9">
+                                        <select id="gender" class="form-control">
+                                            <option value="Male" label="male">
+                                            <option value="Female" label="female">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="weight" class="col-sm-3 control-label">Weight</label>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-xs-9">
+                                                <input id="weight" type="text" class="form-control" maxlength="4">
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <select class="form-control">
+                                                    <option value="kg" label="kg">
+                                                    <option value="pounds" label="lbs">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="height" class="col-sm-3 control-label">Height</label>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-xs-9">
+                                                <input id="height" type="text" class="form-control" maxlength="4">
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <select class="form-control">
+                                                    <option value="cm" label="cm">
+                                                    <option value="inches" label="in">
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i>* required field</i>
+                            </form>
+                        </div>
+                        <div id="customSymptoms" class="tab-pane">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="custom1" class="col-sm-3 control-label">Symptom 1</label>
+                                    <div class="col-sm-9">
+                                        <input id="custom1" type="text" class="form-control" maxlength="4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="custom2" class="col-sm-3 control-label">Symptom 2</label>
+                                    <div class="col-sm-9">
+                                        <input id="custom2" type="text" class="form-control" maxlength="4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="custom3" class="col-sm-3 control-label">Symptom 3</label>
+                                    <div class="col-sm-9">
+                                        <input id="custom3" type="text" class="form-control" maxlength="4">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="studyDetails" class="tab-pane">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="technician" class="col-sm-3 control-label">Technician</label>
+                                    <div class="col-sm-9">
+                                        <input id="technician" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="physician" class="col-sm-3 control-label">Physician</label>
+                                    <div class="col-sm-9">
+                                        <input id="physician" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="refPhysician" class="col-sm-3 control-label">Ref. Physician</label>
+                                    <div class="col-sm-9">
+                                        <input id="refPhysician" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="studyType" class="col-sm-3 control-label">Study Type</label>
+                                    <div class="col-sm-9">
+                                        <select id="studyType" class="form-control">
+                                            <option>pharyngeal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="indication" class="col-sm-3 control-label">Indication</label>
+                                    <div class="col-sm-9">
+                                        <input id="indication" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="armeds" class="col-sm-3 control-label">Antireflux Med.</label>
+                                    <div class="col-sm-9">
+                                        <input id="armeds" type="text" class="form-control" maxlength="30">
+                                    </div>
+                                 </div>
+                                <!--<div class="form-group">
+                                    <label for="reasonForStudy" class="col-sm-3 control-label">Reason for Study</label>
+                                    <div class="col-sm-9">
+                                        <input id="reasonForStudy" type="text" class="form-control">
+                                    </div>
+                                 </div>-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+                    <a id="downloadNewStudy" href="#" class="btn btn-primary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="retrieveModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3>Retrieve Study</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file">
+                            <span class="fileinput-new">Select file</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input id="retrieveFile" type="file">
+                        </span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    </div>
+                    <div id="retrieving">
+                        <p class="alert alert-info text-center">Loading...</p>
+                    </div>
+                    <p id="retrieveMessage" class="text-center"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="openModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Open Study</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="openFile" class="fileinput fileinput-new input-group" data-provides="fileinput">
+                        <div class="form-control" data-trigger="fileinput">
+                            <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                            <span class="fileinput-filename"></span>
+                        </div>
+                        <span class="input-group-addon btn btn-default btn-file">
+                            <span class="fileinput-new">Select file</span>
+                            <span class="fileinput-exists">Change</span>
+                            <input id="file" type="file">
+                        </span>
+                        <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                    </div>
+                    <div id="openFileList" class="text-center">
+                        <p>
+                            <input id="openStudyFilter" type="text" class="form-control" placeholder="Filter by name or by date">
+                        </p>
+                        <div id="openStudyLinks" class="list-group">
+                        </div>
+                        <p>Displaying <span class="display-count">?</span> out of <span class="archive-count">?</span> files in the archive.</p>
+                    </div>
+                    <!--<p class="text-center">Load the <a id="loadJoey" href="#">Heartburn Joey</a> demo file.</p>-->
+                    <p class="text-center">
+                        <span class="fileinput fileinput-new" data-provides="fileinput" style="cursor: pointer;">
+                            <span class="btn btn-default btn-file">
+                                <span class="fileinput-new">Browse</span>
+                                <span class="fileinput-exists"></span>
+                                <input id="openFileInput" type="file">
+                            </span>
+                            <span class="fileinput-filename"></span>
+                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </span>
+                    </p>
+                    <p id="importing" class="alert alert-info hide text-center">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Settings</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#generalSettings" data-toggle="tab">General</a></li>
+                        <li><a href="#acidSettings" data-toggle="tab">Acid Normals</a></li>
+                        <li><a href="#colorSettings" data-toggle="tab">Colors</a></li>
+                        <li><a href="#eventSettings" data-toggle="tab">Event Settings</a></li>
+                        <li><a href="#datadirSettings" data-toggle="tab">Path To Data</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="generalSettings" class="tab-pane active">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="settings-logo" class="col-sm-3 control-label">Logo</label>
+                                    <div class="col-sm-9">
+                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                            <div class="form-control" data-trigger="fileinput">
+                                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                                <span class="fileinput-filename"></span>
+                                            </div>
+                                            <span class="input-group-addon btn btn-default btn-file">
+                                                <span class="fileinput-new">Select file</span>
+                                                <span class="fileinput-exists">Change</span>
+                                                <input id="settings-logo" type="file">
+                                            </span>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-name" class="col-sm-3 control-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-name" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-address" class="col-sm-3 control-label">Address</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-address" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-city" class="col-sm-3 control-label">City</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-city" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-state" class="col-sm-3 control-label">State</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-state" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-zip" class="col-sm-3 control-label">Zip</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-zip" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-zip" class="col-sm-3 control-label">Phone</label>
+                                    <div class="col-sm-9">
+                                        <input id="settings-phone" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="acidSettings" class="tab-pane">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="settings-acidNormalUpright1" class="col-sm-3 control-label">Upright95</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalUpright1" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalUpright2" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalUpright3" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalUpright4" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-acidNormalSupine1" class="col-sm-3 control-label">Supine95</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalSupine1" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalSupine2" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalSupine3" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormalSupine4" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-acidNormal75Upright1" class="col-sm-3 control-label">Upright75</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Upright1" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Upright2" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Upright3" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Upright4" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-acidNormal75Supine1" class="col-sm-3 control-label">Supine75</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Supine1" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Supine2" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Supine3" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input id="settings-acidNormal75Supine4" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="colorSettings" class="tab-pane">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <button id="defaultColors" class="btn btn-primary" text-center>Load Default Colors</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-normal" class="col-sm-3 control-label">Normal</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-normal" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-mild" class="col-sm-3 control-label">Mild</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-mild" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-moderate" class="col-sm-3 control-label">Moderate</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-moderate" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-severe" class="col-sm-3 control-label">Severe</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-severe" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-meal" class="col-sm-3 control-label">Meal</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-meal" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-supine" class="col-sm-3 control-label">Supine</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-supine" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-cough" class="col-sm-3 control-label">Cough</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-cough" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-heartburn" class="col-sm-3 control-label">Heartburn</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-heartburn" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-symptom1" class="col-sm-3 control-label">Symptom 1</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-symptom1" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-symptom2" class="col-sm-3 control-label">Symptom 2</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-symptom2" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="color-symptom3" class="col-sm-3 control-label">Symptom 3</label>
+                                    <div class="col-sm-9">
+                                        <input id="color-symptom3" type="text" class="form-control color-input">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="eventSettings" class="tab-pane">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="settings-minEventTime" class="col-sm-6 control-label">Min Event Time</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-minEventTime" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-endEventThreshold" class="col-sm-6 control-label">End Event Threshold</label>
+                                    <div class="col-sm-2">
+                                        <input id="settings-endEventThreshold" type="text" class="form-control" disabled="disabled">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="datadirSettings" class="tab-pane">
+                            <div class="form-group">
+                                <label for="settings-dataDir" class="col-sm-3 control-label">Directory for Data Files</label>
+                                <div class="col-sm-9">
+                                  <input id="settings-dataDir" type="text" class="form-control" disabled="disabled">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+                    <a id="saveSettings" href="#" class="btn btn-primary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="helpModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Restech DataView</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<p>Version: 4.2.3</p>-->
+                    <p><a id="about" href="#">About</a></p>
+                    <p><a id="licenseAgreement" href="#">License Agreement</a></p>
+                    <p><a id="userGuide" href="#">User Guide</a></p>
+                    <p><a id="calcRyan" href="#">DeMeester RYAN Score</a></p>
+                    <p><a id="normativeChart" href="#">Normative Data Chart</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="retrievingModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Please wait</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Retrieving...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="savingModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Please wait</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Saving...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body text-center">
+                	<p><img src="img/ResLogo.png"></p>
+                    <p> This Product is licensed for use on a single site basis. Copying or redistributing this software is prohibited</p>
+                    <p>Software Version: 4.2.6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div id="userGuideModal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">User Guide</h4>
+				</div>
+				<div class="modal-body text-center">
+					<p>This is where the user guide will go when I get it working</p>
+                    <!--<iframe src="Test.html"seamless="seamless"></iframe>
+                    <iframe src="img/DataView v4 User Guide v 4.2.2_mod.htm" seamless="seamless"></iframe>-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- scripts -->
+    <div>
+        <script>
+        // http://electron.atom.io/docs/v0.37.8/faq/electron-faq/#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+        </script>
+        <script src="lib/underscore.js"></script>
+        <script src="lib/moment.js"></script>
+        <script src="lib/jquery.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.js"></script>
+        <script src="lib/bootstrap3-typeahead.js"></script>
+        <script src="lib/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+        <script src="lib/jquery-minicolors/jquery.minicolors.js"></script>
+        <script src="lib/bootbox.js"></script>
+        <script src="lib/d3.v3.js"></script>
+        <!-- <script src="lib/FileSaver.js"></script> -->
+        <script src="script/simplify2.js"></script>
+        <script src="lib/require.js"></script>
+
+        <script src="script/timer.js"></script>
+        <script src="script/file.js"></script>
+        <script src="script/normalize.js"></script>
+        <!-- <script src="script/simplify.js"></script> -->
+        <script src="script/chart.js"></script>
+        <script src="script/acid.js"></script>
+        <script src="script/report.js"></script>
+        <script src="script/ryan.js"></script>
+        <script src="script/commands.js"></script>
+        <script src="script/index.js"></script>
+        <script src="script/app.js"></script>
+        <script src="script/settings.js"></script>
+    </div>
+</body>
 </html>
