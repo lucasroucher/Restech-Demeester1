@@ -1,0 +1,13 @@
+{
+  "name": "restech-dataview",
+  "description": "Restech DataView",
+  "author": "Restech",
+  "private": true,
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron-debug": "^0.7.0",
+    "lodash": "^4.11.1",
+    "mkdirp": "^0.5.1"
+  }
+}

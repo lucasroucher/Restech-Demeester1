@@ -1,4 +1,5 @@
-/log.txt
-/node_modules
-/Restech DataView-*
 .DS_Store
+/dist
+/node_modules
+/app/log.txt
+/app/node_modules
