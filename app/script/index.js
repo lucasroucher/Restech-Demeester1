@@ -10,8 +10,6 @@ $(function() {
         return this;
     };
 
-    requirejs.config({ waitSeconds: 300 });
-
     $('body').removeClass('before-ready');
 
     // window.onerror = function(msg, url, line) {
@@ -68,13 +66,6 @@ $(function() {
     }
 
     window.displayStudy = displayStudy;
-
-    $('#loadJoey').click(function(e) {
-        e.preventDefault();
-        requirejs([ 'script/joey.js' ], function() {
-            processText(joey, displayStudy);
-        });
-    });
 
     $('#file, #openFileInput').change(function(e) {
         if (this.files && this.files.length) {
