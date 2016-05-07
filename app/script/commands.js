@@ -234,7 +234,29 @@ var cmds = (function() {
 
             document.title = newTitle;
 
-            window.print();
+            // window.print();
+
+            const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
+            const dialog = nodeRequire('electron').remote.dialog;
+            const fs = nodeRequire('fs');
+            const win = BrowserWindow.getFocusedWindow();
+
+            dialog.showSaveDialog(win, {
+                title: 'Save as PDF',
+                defaultPath: newTitle + '.pdf'
+            }, function(filename) {
+                console.log('saving PDF to %s', filename);
+
+                win.webContents.printToPDF({}, function(err, data) {
+                    if (err) throw err;
+
+                    fs.writeFile(filename, data, function(err) {
+                      if (err) throw err;
+
+                      console.log('PDF saved successfully');
+                  });
+                });
+            });
         },
 
         delMeals: function(el, study) {
