@@ -17,7 +17,7 @@ var availableFiles = {
 
 module.exports = function(msg, push, done) {
     var file = availableFiles[msg.file];
-    var cmd = startCommand + ' "' + path.join(__dirname, file) + '"';
+    var cmd = startCommand + ' "' + path.join(__dirname, '../docs', file) + '"';
 
     logger.log('about to exec: %s', cmd);
 
