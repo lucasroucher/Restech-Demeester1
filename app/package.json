@@ -1,9 +1,9 @@
 {
+  "version": "1.0.0",
   "name": "restech-dataview",
   "description": "Restech DataView",
   "author": "Restech",
   "private": true,
-  "version": "1.0.0",
   "main": "main.js",
   "dependencies": {
     "electron-debug": "^0.7.0",

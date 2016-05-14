@@ -2,7 +2,7 @@
 
 This is an Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
 
-## To Use
+## To use as a developer
 
 To clone this repository you'll need [Git](https://git-scm.com) or a GUI client like [SourceTree](https://www.sourcetreeapp.com/).
 
@@ -29,8 +29,18 @@ npm install
 
 # run the app
 npm start
-
-# build the installer
-npm run dist
-# output will be in dist folder
 ```
+
+## To build the installer
+
+To build an installer, edit the version at the top of app/package.json.
+
+Then run this command from this folder:
+
+```
+npm run dist
+```
+
+The installer will be in the dist/win folder.
+
+Running the installer will add a shortcut to your desktop and start menu.
