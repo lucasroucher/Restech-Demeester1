@@ -247,7 +247,10 @@ var cmds = (function() {
             }, function(filename) {
                 console.log('saving PDF to %s', filename);
 
-                win.webContents.printToPDF({}, function(err, data) {
+                win.webContents.printToPDF({
+                    marginsType: 2, // 0 = default margin, 1 = no margin, 2 = minimal margin
+                    printBackground: false
+                }, function(err, data) {
                     if (err) throw err;
 
                     fs.writeFile(filename, data, function(err) {

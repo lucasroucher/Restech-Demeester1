@@ -11,6 +11,11 @@ body {
     @page {
         size: auto;
     }
+
+    body {
+        padding-top: 20px;
+    }
+
     #main {
         width: 100% !important;
     }
