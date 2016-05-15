@@ -46,7 +46,10 @@ module.exports = function() {
         // Install desktop and start menu shortcuts
         spawnUpdate(['--createShortcut', exeName]);
 
-        setTimeout(app.quit, 1000);
+        require('./install')(app, function() {
+          setTimeout(app.quit, 1000);
+        });
+
         return true;
 
       case '--squirrel-uninstall':
