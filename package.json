@@ -15,6 +15,7 @@
   "build": {
     "productName": "Restech DataView",
     "app-bundle-id": "com.restech.dataview",
-    "app-category-type": "public.app-category.medical"
+    "app-category-type": "public.app-category.medical",
+    "asar": false
   }
 }
