@@ -156,16 +156,20 @@ function sendQuery(val) {
 function setLinks(res) {
     $('#openStudyLinks').empty();
 
-    res.results.forEach(function(file) {
-        $('#openStudyLinks').append(
-            $('<a href="#" class="list-group-item clearfix">')
-            .data('file', file.file)
-            .append($('<span class="pull-left">').text(file.name + (file.modified ? ' (modified)' : '')))
-            .append($('<span class="pull-right">').text(new Date(file.date).toDateString()))
-        );
-    });
+    if (res && res.results) {
+        res.results.forEach(function(file) {
+            $('#openStudyLinks').append(
+                $('<a href="#" class="list-group-item clearfix">')
+                .data('file', file.file)
+                .append($('<span class="pull-left">').text(file.name + (file.modified ? ' (modified)' : '')))
+                .append($('<span class="pull-right">').text(new Date(file.date).toDateString()))
+            );
+        });
 
-    $('.display-count').text(res.results.length);
+        $('.display-count').text(res.results.length);
+    } else {
+        $('.display-count').text(0);
+    }
 }
 
 $('#openStudyLinks').on('click', 'a', function(e) {

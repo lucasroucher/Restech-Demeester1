@@ -300,15 +300,17 @@ function chartData(study, options) {
         }
 
         function getScaledOffsetX(e) {
+            var offsetX = e.pageX - e.target.getBoundingClientRect().left;
+
             if (windowResized) {
                 actualWidth = $(e.target).get(0).getBoundingClientRect().width;
-                //actualWidth = $(e.target).offsetParent().width();
                 widthFactor = chartWidth / actualWidth;
-                console.log('actualWidth: ' + actualWidth, ', widthFactor: ' + widthFactor);
+                console.log('actualWidth: ' + actualWidth, ', chartwidth:' + chartWidth + ', widthFactor: ' + widthFactor);
                 windowResized = false;
+                console.log('offsetX:' + offsetX + ", margin.left:" + margin.left);
             }
 
-            return e.offsetX * widthFactor - margin.left;
+            return offsetX * widthFactor - margin.left;
         }
 
         function updateSel() {
