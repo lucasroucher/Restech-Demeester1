@@ -123,6 +123,8 @@ $('#retrieveLink').on('click', function(e) {
     }
 });
 
+var archiveCount;
+
 $('#openLink').on('click', function(e) {
     $('#openFile').hide();
     $('#openFileList').show();
@@ -132,11 +134,12 @@ $('#openLink').on('click', function(e) {
         console.log(msg);
         disconnect(port);
         $('.archive-count').text(msg.results);
+        archiveCount = msg.results;
     });
 
     send(port, { type: 'count' });
 
-    sendQuery();
+    sendQuery('');
 });
 
 $('#openModal').on('shown.bs.modal', function() {
@@ -166,9 +169,15 @@ function setLinks(res) {
             );
         });
 
-        $('.display-count').text(res.results.length);
+        $('#fileCountMessage').text(Globalize.formatMessage('fileCountMessage', {
+            displayCount: res.results.length,
+            archiveCount: archiveCount
+        }));
     } else {
-        $('.display-count').text(0);
+        $('#fileCountMessage').text(Globalize.formatMessage('fileCountMessage', {
+            displayCount: 0,
+            archiveCount: archiveCount
+        }));
     }
 }
 

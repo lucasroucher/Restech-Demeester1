@@ -4,6 +4,7 @@
             "title": "Entschuldigung!",
             "text": "Keine PatientData.txt Datei gefunden wurde."
         },
+        "fileCountMessage": "Es werden {displayCount} von {archiveCount} Dateien im Archiv.",
         "menu": {
             "new": "Neu",
             "retrieve": "Abrufen"

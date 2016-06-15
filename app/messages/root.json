@@ -4,6 +4,7 @@
             "title": "Sorry",
             "text": "No PatientData.txt file was found."
         },
+        "fileCountMessage": "Displaying {displayCount} out of {archiveCount} files in the archive.",
         "menu": {
             "new": "New",
             "retrieve": "Retrieve"

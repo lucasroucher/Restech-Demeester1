@@ -78,6 +78,8 @@ $(function() {
         return $.getJSON(file).then(function(result) {
             Globalize.loadMessages(result);
             console.log('loaded ' + file);
+        }, function(err) {
+            console.error('there is probably an error in your JSON, buddy');
         });
     }
 });
