@@ -1,0 +1,28 @@
+{
+    "de": {
+        "noData": {
+            "title": "Entschuldigung!",
+            "text": "Keine PatientData.txt Datei gefunden wurde."
+        },
+        "menu": {
+            "new": "Neu",
+            "retrieve": "Abrufen"
+        },
+        "newStudy": {
+            "title": "Neue Studie",
+            "tabs": {
+                "patientDetails": {
+                    "title": "Patientendaten",
+                    "lastName": "Familienname",
+                    "firstName": "Vorname"
+                },
+                "customSymptoms": {
+                    "title": "Benutzerdefinierte Symptome"
+                },
+                "studyDetails": {
+                    "title": "Einzelheiten zur Studie"
+                }
+            }
+        }
+    }
+}

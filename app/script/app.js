@@ -110,8 +110,8 @@ $('#retrieveLink').on('click', function(e) {
                 done();
             case 'notFound':
                 bootbox.alert({
-                    title: 'Sorry',
-                    message: 'No PatientData.txt file was found.'
+                    title: Globalize.formatMessage('noData/title'),
+                    message: Globalize.formatMessage('noData/text')
                 });
                 $('#retrievingModal').modal('hide');
                 done();
@@ -357,6 +357,25 @@ function readSettings() {
         CONFIG = res.settings;
 
         updateSettingsOnPage();
+
+        var desiredLocale = res.settings.locale || 'en';
+        var currentLocale = Globalize.locale();
+
+        if (!currentLocale || currentLocale.locale !== desiredLocale) {
+            CHANGE_LOCALE(desiredLocale).then(function() {
+                console.log('locale changed to ' + desiredLocale + ', updating messages');
+
+                $('[data-loc-text]').each(function() {
+                    var $this = $(this);
+                    var key = $this.data('locText');
+
+                    if (key) {
+                        var text = Globalize.formatMessage(key);
+                        $this.text(text);
+                    }
+                });
+            });
+        }
     });
 }
 
