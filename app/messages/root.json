@@ -7,7 +7,20 @@
         "fileCountMessage": "Displaying {displayCount} out of {archiveCount} files in the archive.",
         "menu": {
             "new": "New",
-            "retrieve": "Retrieve"
+            "retrieve": "Retrieve",
+            "open": "Open",
+            "printPrev": "Print Preview",
+            "report": "Report",
+            "graph": "Graph",
+            "save": "Save"
+        },
+        "settings": {
+            "settings":{
+                "title":  "Settings",
+            },
+            "help": {
+                "title": "Help"
+            }
         },
         "newStudy": {
             "title": "New Study",
@@ -15,15 +28,152 @@
                 "patientDetails": {
                     "title": "Patient Details",
                     "lastName": "Last Name",
-                    "firstName": "First Name"
+                    "firstName": "First Name",
+                    "studyDate": "Study Date",
+                    "patientID": "Patient ID",
+                    "birthdate": "Birthdate",
+                    "gender": {
+                        "title": "Gender",
+                        "male": "Male",
+                        "female": "Female"
+                    },
+                    "height": "Height",
+                    "requiredField": "required field"
                 },
                 "customSymptoms": {
-                    "title": "Custom Symptoms"
+                    "title": "Custom Symptoms",
+                    "symptom1": "Symptom 1",
+                    "symptom2": "Symptom 2",
+                    "symptom3": "Symptom 3"
                 },
                 "studyDetails": {
-                    "title": "Study Details"
-                }
+                    "title": "Study Details",
+                    "technician": "Technician",
+                    "physician": "Physician",
+                    "refPhysician": "Ref Physician",
+                    "studyType": "Study Type",
+                    "indication": "Indication",
+                    "antirefluxMed": "Antireflux Med."
+                },
+                "cancel": "Cancel",
+                "save": "Save"
             }
+        },
+        "retrieveStudy": {
+            "title": "Retrieve Study",
+            "selectFile": "Select File",
+            "change": "Change",
+            "remove": "Remove",
+            "loading": "Loading"
+        },
+        "openStudy": {
+            "title": "Title",
+            "selectFile": "Select File",
+            "change": "Change",
+            "remove": "Remove",
+            "browse": "Browse",
+            "loading": "Loading"
+        },
+        "chart":{
+            "title": "Patient Name",
+            "meal": "Meal",
+            "supine": "Supine",
+            "cough": "Cough",
+            "heartburn": "Heartburn",
+            "custom": "Custom",
+            "deleteMeals": "Delete Meals",
+            "heartburnShort": "HB",
+            "all": " All"
+        },
+        "reportPage": {
+            "indication": "Indication",
+            "antirefluxMed": "Antireflux Med",
+            "studyDuration": "Study Duration",
+            "mealsRemoved": "Meals Removed From Calculations",
+            "lastName": "Last Name",
+            "firstName": "First Name",
+            "studyDate": "Study Date",
+            "patientID": "Patient #",
+            "dob": "D.O.B",
+            "investigator": "Investigator",
+            "referredBy": "Referred By",
+            "eventCalculations": "EVENT CALCULATIONS",
+            "totalTimeOfAllpHEvents": "Total time of all pH events",
+            "totalPercentpHBelowBaseline": "Total % pH below baseline",
+            "totalTimepHBelowBaselineUpright": "Total time below baseline pH, upright",
+            "totalPercentpHBelowBaselineUpright": "Total % pH below baseline, upright",
+            "totalTimepHBelowBaselineSupine": "Total time below baseline pH, supine",
+            "totalPercentpHBelowBaselineSupine": "Total % pH below baseline, supine",
+            "longestTimeEvent": "Longest time of a pH Event",
+            "numberEventsGreaterThan5Minutes": "Number of events > 5 minutes",
+            "totalNumberOfEvents": "Total Number of Events",
+            "symptomCorrelation": "SYMPTOM CORRELATION",
+            "total": "TOTAL",
+            "cough": "Cough",
+            "heartburn":"Heartburn",
+            "patientsValue": "Patients Value",
+            "normalValue": "Normal Value",
+            "signature":"Signature:",
+            "notes": "Notes"
+        },
+        "settingsPage": {
+            "title": "Settings",
+            "tabs": {
+                "general": {
+                    "title": "General",
+                    "logo": "Logo",
+                    "selectFile": "Select File",
+                    "change": "Change",
+                    "remove": "Remove",
+                    "name": "Name",
+                    "address": "Address",
+                    "city": "City",
+                    "state": "State",
+                    "zip": "Zip",
+                    "phone": "Phone"
+                  },
+                "acidNormals": {
+                    "title": "Acid Normals",
+                    "upright95": "Upright95",
+                    "supine95": "Supine95",
+                    "upright75": "Upright75",
+                    "supine75": "Supine75"
+                },
+                "colors": {
+                    "title": "Colors",
+                    "loadDefault": "Load Default Colors",
+                    "normal": "Normal",
+                    "mild": "Mild",
+                    "moderate": "Moderate",
+                    "severe": "Severe",
+                    "meal": "Meal",
+                    "supine": "Supine",
+                    "cough": "Cough",
+                    "heartburn": "Heartburn",
+                    "symptom1": "Symptom1",
+                    "symptom2": "Symptom2",
+                    "symptom3": "Symptom3"
+                },
+                "eventSettings": {
+                    "title": "Event Settings",
+                    "minEventTime": "Min Event Time",
+                    "endEventThreshold": "End Event Threshold"
+                },
+                "pathToData": {
+                    "title": "Path To Data",
+                    "dirForDataFiles": "Directory For Data Files"
+                },
+                "cancel": "Cancel",
+                "save": "Save"
+            },
+          "help":{
+            "about": "About",
+            "licenseAgreement": "License Agreement",
+            "userGuide": "User Guide",
+            "demeesterRyanScore": "DeMeester Ryan Score",
+            "normativeDataChart": "Normative Data Chart"
+          },
+
         }
     }
 }

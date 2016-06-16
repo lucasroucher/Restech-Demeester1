@@ -380,6 +380,9 @@ function readSettings() {
 
                     if (key) {
                         var text = Globalize.formatMessage(key);
+                        if (!text){
+                          console.log("You have no key for" + key);
+                        }
                         $this.text(text);
                     }
                 });

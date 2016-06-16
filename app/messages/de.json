@@ -7,7 +7,17 @@
         "fileCountMessage": "Es werden {displayCount} von {archiveCount} Dateien im Archiv.",
         "menu": {
             "new": "Neu",
-            "retrieve": "Abrufen"
+            "retrieve": "Abrufen",
+            "open": "Öffnen",
+            "printPrev": "Druckvorschau",
+            "report": "Report",
+            "graph": "Schaubild",
+            "save": "Speichern"
+        },
+        "settings": {
+            "settings": "Einstellungen",
+            "help": "Hilfe"
+
         },
         "newStudy": {
             "title": "Neue Studie",
@@ -15,15 +25,174 @@
                 "patientDetails": {
                     "title": "Patientendaten",
                     "lastName": "Familienname",
-                    "firstName": "Vorname"
+                    "firstName": "Vorname",
+                    "studyDate": "Studie Datum",
+                    "patientID": "Patienten-ID",
+                    "birthdate": "Geburtstag",
+                    "gender": {
+                        "title": "Geschlecht",
+                        "male": "männlich",
+                        "female": "Weiblich"
+                    },
+                    "weight": "Gewicht",
+                    "height": "Höhe",
+                    "requiredField": "Pflichtfeld"
+
                 },
                 "customSymptoms": {
-                    "title": "Benutzerdefinierte Symptome"
+                    "title": "Benutzerdefinierte Symptome",
+                    "symptom1": "Symptome 1",
+                    "symptom2": "Symptome 2",
+                    "symptom3": "Symptome 3"
+
                 },
                 "studyDetails": {
-                    "title": "Einzelheiten zur Studie"
-                }
+                    "title": "Einzelheiten zur Studie",
+                    "technician": "Techniker",
+                    "physician": "Arzt",
+                    "refPhysician": "zuweisenden Arzt",
+                    "studyType": "Studientyp",
+                    "indication": "Hinweis",
+                    "antirefluxMed": "Antireflux Medizin"
+                },
+                "kündigen": "Kündigen",
+                "save": "Speichern"
             }
-        }
+          },
+          "retrieveStudy": {
+              "title": "abrufen Studie  ",
+              "selectFile": "Datei aussuchen",
+              "change": "ändern",
+              "remove": "beseitigen",
+              "loading": "die Beladung"
+          },
+          "openStudy": {
+              "title": "Titel",
+              "selectFile": "Datei aussuchen",
+              "change": "ändern",
+              "remove": "beseitigen",
+              "browse": "Browse",
+              "loading": "die Beladung"
+          },
+          "chart":{
+              "title": "Patientenname",
+              "meal": "Essen",
+              "supine": "Supinium",
+              "cough": "Husten",
+              "heartburn": "Sodbrennen",
+              "custom": "maßgeschneidert",
+              "deleteMeals": "löschen Mahlzeiten",
+              "heartburnShort": "HB",
+              "all": " Alle"
+          },
+          "reportPage": {
+              "indication": "Hinweis",
+              "antirefluxMed": "Antireflux Medizin",
+              "studyDuration": "Studiendauer",
+              "mealsRemoved": "Mahlzeiten aus der Berechnung entfernt",
+              "lastName": "Familienname",
+              "firstName": "Vorname",
+              "studyDate": "Studie Datum",
+              "patientID": "Patienten-ID",
+              "dob": "Geburtsdatum",
+              "investigator": "Ermittler",
+              "referredBy": "bezeichnet durch",
+              "eventCalculations": "Ereignis Berechnungen",
+              "totalTimeOfAllpHEvents": "Gesamtzeit aller pH- Ereignisse",
+              "totalPercentpHBelowBaseline": "Gesamt % unter den Ausgangswert",
+              "totalTimepHBelowBaselineUpright": "Insgesamt benötigte Zeit unter den Ausgangswert pH , aufrecht",
+              "totalPercentpHBelowBaselineUpright": "Insgesamt% pH-Wert unter den Ausgangswert , aufrecht",
+              "totalTimepHBelowBaselineSupine": "Insgesamt benötigte Zeit unter den Ausgangswert pH-Wert, Supinium",
+              "totalPercentpHBelowBaselineSupine": "Insgesamt% pH-Wert unter den Ausgangswert, Supinium",
+              "longestTimeEvent": "Längster Zeit eines pH Ereignis",
+              "numberEventsGreaterThan5Minutes": "Anzahl der Ereignisse > 5 minuten",
+              "totalNumberOfEvents": "Gesamtzahl  der Ereignisse",
+              "symptomCorrelation": "PROBLEM ENTSPRECHUNGS",
+              "total": "GESAMT",
+              "cough": "Husten",
+              "heartburn":"Sodbrennen",
+              "patientsValue": "Patienten Wert",
+              "normalValue": "Normalwert",
+              "signature":"Unterschrift:",
+              "notes": "Notizen"
+          },
+          "settingsPage": {
+              "title": "Einstellungen",
+              "tabs": {
+                  "general": {
+                      "title": "Allgemein",
+                      "logo": "Logo",
+                      "selectFile": "Datei aussuchen",
+                      "change": "ändern",
+                      "remove": "beseitigen",
+                      "name": "Name",
+                      "address": "Adresse",
+                      "city": "Stadt",
+                      "state": "Bundesland",
+                      "zip": "Postleitzahl",
+                      "phone": "Telefon"
+                    },
+                  "acidNormals": {
+                      "title": "Saurer Normals",
+                      "upright95": "Upright95",
+                      "supine95": "Supinium95",
+                      "upright75": "Upright75",
+                      "supine75": "Supinium75"
+                  },
+                  "colors": {
+                      "title": "Farben",
+                      "loadDefault": "Load Default Farben",
+                      "normal": "Normal",
+                      "mild": "Mild",
+                      "moderate": "mäßig",
+                      "severe": "ernst",
+                      "meal": "Essen",
+                      "supine": "Supinium",
+                      "cough": "Husten",
+                      "heartburn": "Sodbrennen",
+                      "symptom1": "Symptome1",
+                      "symptom2": "Symptome2",
+                      "symptom3": "Symptome3"
+                  },
+                  "eventSettings": {
+                      "title": "Ereigniseinstellungen",
+                      "minEventTime": "Mindestereigniszeit",
+                      "endEventThreshold": "Ende Ereignis Schwelle"
+                  },
+                  "pathToData": {
+                      "title": "Weg zur Daten",
+                      "dirForDataFiles": "Verzeichnis für Datendateien"
+                  },
+                  "cancel": "kündigen",
+                  "save": "Speichern"
+              },
+            "help":{
+              "about": "über",
+              "licenseAgreement": "Lizenzvereinbarung",
+              "userGuide": "Benutzerhandbuch",
+              "demeesterRyanScore": "DeMeester Ryan Score",
+              "normativeDataChart": "Normative Daten Chart"
+            },
+
+          },
+          "retrievingModal":{
+              "title": "Warten Sie mal",
+              "retrieving": "Abrufen",
+
+          },
+          "savingModal": {
+              "title": "Warten Sie mal",
+
+          },
+          "aboutModal": {
+              "title": "über",
+              "message": "Dieses Produkt ist für den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten",
+              "version": "Softwareversion"
+          },
+          "userGuideModal": {
+              "title": "Benutzerhandbuch"
+          }
+
+
     }
 }
