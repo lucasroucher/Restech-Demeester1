@@ -101,7 +101,17 @@ $('#retrieveLink').on('click', function(e) {
                 break;
             case 'foundEnd':
                 console.log('foundData.length: ' + foundData.length);
-                processText(foundData, displayStudy);
+                //Totally lame way to check to see if there is actual pH vals in the file they are retrieving ... this will change
+                if ( foundData.length > 5000 ){
+                    processText(foundData, displayStudy);
+                }
+                else {
+                     bootbox.alert({
+                                      title: 'Sorry',
+                                      message: 'There was no data in the retrieved file.'
+                     });
+                 }
+
                 $('#retrievingModal').modal('hide');
                 done();
                 break;
