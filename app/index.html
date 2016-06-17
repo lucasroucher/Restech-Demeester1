@@ -1053,13 +1053,8 @@
 
     <!-- scripts -->
     <div>
-        <script>
-        // http://electron.atom.io/docs/v0.37.8/faq/electron-faq/#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
-        window.nodeRequire = require;
-        delete window.require;
-        delete window.exports;
-        delete window.module;
-        </script>
+        <script src="script/electron.js"></script>
+        <script src="script/chrome.js"></script>
 
         <script src="lib/underscore.js"></script>
         <script src="lib/moment.js"></script>
