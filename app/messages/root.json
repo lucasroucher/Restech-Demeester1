@@ -16,7 +16,7 @@
         },
         "settings": {
             "settings":{
-                "title":  "Settings",
+                "title":  "Settings"
             },
             "help": {
                 "title": "Help"
@@ -166,13 +166,13 @@
                 "cancel": "Cancel",
                 "save": "Save"
             },
-          "help":{
+          "helpModal":{
             "about": "About",
             "licenseAgreement": "License Agreement",
             "userGuide": "User Guide",
             "demeesterRyanScore": "DeMeester Ryan Score",
             "normativeDataChart": "Normative Data Chart"
-          },
+          }
 
         }
     }

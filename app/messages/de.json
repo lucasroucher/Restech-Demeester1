@@ -166,22 +166,22 @@
                   "cancel": "kündigen",
                   "save": "Speichern"
               },
-            "help":{
+            "helpModal":{
               "about": "über",
               "licenseAgreement": "Lizenzvereinbarung",
               "userGuide": "Benutzerhandbuch",
               "demeesterRyanScore": "DeMeester Ryan Score",
               "normativeDataChart": "Normative Daten Chart"
-            },
+            }
 
           },
           "retrievingModal":{
               "title": "Warten Sie mal",
-              "retrieving": "Abrufen",
+              "retrieving": "Abrufen"
 
           },
           "savingModal": {
-              "title": "Warten Sie mal",
+              "title": "Warten Sie mal"
 
           },
           "aboutModal": {
