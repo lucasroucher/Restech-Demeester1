@@ -1,21 +1,21 @@
 {
   "private": true,
   "devDependencies": {
-    "electron-builder": "^3.20.0",
-    "electron-prebuilt": "^1.0.2",
-    "rimraf": "^2.5.2"
+    "electron-builder": "5.10.0",
+    "electron-prebuilt": "1.2.5",
+    "rimraf": "2.5.2"
   },
   "scripts": {
-    "postinstall": "install-app-deps",
     "start": "electron app/main.js",
-    "pack": "build",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
     "dist": "build",
     "clean": "rimraf dist"
   },
   "build": {
-    "productName": "Restech DataView",
-    "app-bundle-id": "com.restech.dataview",
+    "appId": "com.restech.dataview",
     "app-category-type": "public.app-category.medical",
+    "productName": "Restech DataView",
     "asar": false
   }
 }

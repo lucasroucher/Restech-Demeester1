@@ -1,16 +1,17 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "restech-dataview",
   "description": "Restech DataView",
   "author": "Restech",
   "private": true,
   "main": "main.js",
   "dependencies": {
-    "cldr-data": "^29.0.1",
-    "electron-debug": "^0.7.0",
-    "globalize": "^1.1.1",
-    "lodash": "^4.11.1",
-    "mkdirp": "^0.5.1",
-    "shelljs": "^0.7.0"
+    "cldr-data": "29.0.1",
+    "cldrjs": "0.4.5",
+    "electron-debug": "0.7.0",
+    "globalize": "1.1.1",
+    "lodash": "4.11.1",
+    "mkdirp": "0.5.1",
+    "shelljs": "0.7.0"
   }
 }
