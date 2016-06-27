@@ -16,6 +16,9 @@
     "appId": "com.restech.dataview",
     "app-category-type": "public.app-category.medical",
     "productName": "Restech DataView",
-    "asar": false
+    "asar": true,
+    "extraResources": [
+      "app/docs/*.pdf"
+    ]
   }
 }

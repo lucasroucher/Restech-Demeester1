@@ -1,6 +1,8 @@
 var child_process = require('child_process');
 var path = require('path');
 
+const isDev = require('electron-is-dev');
+
 var logger = require('./logger');
 
 var startCommand = process.platform === 'win32'
@@ -17,7 +19,10 @@ var availableFiles = {
 
 module.exports = function(msg, push, done) {
     var file = availableFiles[msg.file];
-    var cmd = startCommand + ' "' + path.join(__dirname, '../docs', file) + '"';
+
+    var dir = isDev ? path.join(__dirname, '../docs') : path.join(process.resourcesPath, 'app/docs');
+
+    var cmd = startCommand + ' "' + path.join(dir, '../docs', file) + '"';
 
     logger.log('about to exec: %s', cmd);
 
