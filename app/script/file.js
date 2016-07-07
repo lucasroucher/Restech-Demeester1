@@ -117,6 +117,13 @@ function parseFile(text) {
     // Parses the tab-separated symptom names.
     function parseSymptoms(line) {
         result.symptomNames = line.split('\t');
+        var counter = 1;
+        for (var i=0; i<result.symptomNames.length; i++){
+          if (result.symptomNames[i].length < 1 ){
+            result.symptomNames[i] = "Sx" + counter;
+          }
+          counter++;
+        }
     }
 
     // This line used to hold a path to something like:

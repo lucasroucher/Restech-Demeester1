@@ -7,10 +7,10 @@
         "fileCountMessage": "Es werden {displayCount} von {archiveCount} Dateien im Archiv.",
         "menu": {
             "new": "Neu",
-            "retrieve": "Abrufen",
-            "open": "Öffnen",
+            "retrieve": "Aufzeichnung",
+            "open": "Oeffnen",
             "printPrev": "Druckvorschau",
-            "report": "Report",
+            "report": "Bericht",
             "graph": "Schaubild",
             "save": "Speichern"
         },
@@ -20,42 +20,42 @@
 
         },
         "newStudy": {
-            "title": "Neue Studie",
+            "title": "Neue Aufzeichnung",
             "tabs": {
                 "patientDetails": {
-                    "title": "Patientendaten",
-                    "lastName": "Familienname",
+                    "title": "Patienten Details",
+                    "lastName": "Nachname",
                     "firstName": "Vorname",
-                    "studyDate": "Studie Datum",
-                    "patientID": "Patienten-ID",
+                    "studyDate": "Aufzeichnungsdatum",
+                    "patientID": "Patienten ID",
                     "birthdate": "Geburtstag",
                     "gender": {
                         "title": "Geschlecht",
-                        "male": "männlich",
-                        "female": "Weiblich"
+                        "male": "maennlich",
+                        "female": "weiblich"
                     },
                     "weight": "Gewicht",
-                    "height": "Höhe",
-                    "requiredField": "Pflichtfeld"
+                    "height": "Groesse",
+                    "requiredField": "Pflicht-Feld"
 
                 },
                 "customSymptoms": {
-                    "title": "Benutzerdefinierte Symptome",
+                    "title": "Patientenspezifische Symptome",
                     "symptom1": "Symptome 1",
                     "symptom2": "Symptome 2",
                     "symptom3": "Symptome 3"
 
                 },
                 "studyDetails": {
-                    "title": "Einzelheiten zur Studie",
-                    "technician": "Techniker",
+                    "title": "Studiendetails",
+                    "technician": "Aerztliche Hilfskraft",
                     "physician": "Arzt",
-                    "refPhysician": "zuweisenden Arzt",
-                    "studyType": "Studientyp",
-                    "indication": "Hinweis",
-                    "antirefluxMed": "Antireflux Medizin"
+                    "refPhysician": "Ueberweisender Arzt",
+                    "studyType": "Aufzeichnungstyp",
+                    "indication": "Indikation",
+                    "antirefluxMed": "Antireflux Med."
                 },
-                "kündigen": "Kündigen",
+                "cancel": "Abbrechen",
                 "save": "Speichern"
             }
           },
@@ -76,43 +76,43 @@
           },
           "chart":{
               "title": "Patientenname",
-              "meal": "Essen",
-              "supine": "Supinium",
+              "meal": "Mahlzeit",
+              "supine": "Rueckenlage",
               "cough": "Husten",
               "heartburn": "Sodbrennen",
               "custom": "maßgeschneidert",
-              "deleteMeals": "löschen Mahlzeiten",
+              "deleteMeals": "Mahlzeiten loeschen",
               "heartburnShort": "HB",
               "all": " Alle"
           },
           "reportPage": {
               "indication": "Hinweis",
-              "antirefluxMed": "Antireflux Medizin",
+              "antirefluxMed": "Antireflux Med.",
               "studyDuration": "Studiendauer",
               "mealsRemoved": "Mahlzeiten aus der Berechnung entfernt",
-              "lastName": "Familienname",
+              "lastName": "Nachname",
               "firstName": "Vorname",
-              "studyDate": "Studie Datum",
-              "patientID": "Patienten-ID",
-              "dob": "Geburtsdatum",
+              "studyDate": "Aufzeichnungsdatum",
+              "patientID": "Patienten ID",
+              "dob": "Geburtstag",
               "investigator": "Ermittler",
               "referredBy": "bezeichnet durch",
               "eventCalculations": "Ereignis Berechnungen",
-              "totalTimeOfAllpHEvents": "Gesamtzeit aller pH- Ereignisse",
-              "totalPercentpHBelowBaseline": "Gesamt % unter den Ausgangswert",
-              "totalTimepHBelowBaselineUpright": "Insgesamt benötigte Zeit unter den Ausgangswert pH , aufrecht",
-              "totalPercentpHBelowBaselineUpright": "Insgesamt% pH-Wert unter den Ausgangswert , aufrecht",
-              "totalTimepHBelowBaselineSupine": "Insgesamt benötigte Zeit unter den Ausgangswert pH-Wert, Supinium",
-              "totalPercentpHBelowBaselineSupine": "Insgesamt% pH-Wert unter den Ausgangswert, Supinium",
-              "longestTimeEvent": "Längster Zeit eines pH Ereignis",
-              "numberEventsGreaterThan5Minutes": "Anzahl der Ereignisse > 5 minuten",
-              "totalNumberOfEvents": "Gesamtzahl  der Ereignisse",
-              "symptomCorrelation": "PROBLEM ENTSPRECHUNGS",
+              "totalTimeOfAllpHEvents": "Gesamtzeit aller pH Ereignisse",
+              "totalPercentpHBelowBaseline": "Gesamt % pH unter Grenzwert pH",
+              "totalTimepHBelowBaselineUpright": "Gesamtzeit unter pH Grenzwert, aufrecht",
+              "totalPercentpHBelowBaselineUpright": "Gesamt % pH unter Grenzwert, aufrecht",
+              "totalTimepHBelowBaselineSupine": "Gesamtzeit unter Grenzwert pH, liegend",
+              "totalPercentpHBelowBaselineSupine": "Gesamt % unter Grenzwert pH, liegend",
+              "longestTimeEvent": "Laengste Dauer eines pH Ereignisses",
+              "numberEventsGreaterThan5Minutes": "Anzahl an Ereignissen > 5 Minuten",
+              "totalNumberOfEvents": "Gesamtanzahl  der Ereignisse",
+              "symptomCorrelation": "Symptom Korrelation",
               "total": "GESAMT",
               "cough": "Husten",
               "heartburn":"Sodbrennen",
               "patientsValue": "Patienten Wert",
-              "normalValue": "Normalwert",
+              "normalValue": "Normaler Wert",
               "signature":"Unterschrift:",
               "notes": "Notizen"
           },
@@ -134,10 +134,10 @@
                     },
                   "acidNormals": {
                       "title": "Saurer Normals",
-                      "upright95": "Upright95",
-                      "supine95": "Supinium95",
-                      "upright75": "Upright75",
-                      "supine75": "Supinium75"
+                      "upright95": "Aufrecht95",
+                      "supine95": "Ruecken95",
+                      "upright75": "Aufrecht75",
+                      "supine75": "Ruecken75"
                   },
                   "colors": {
                       "title": "Farben",
@@ -146,8 +146,8 @@
                       "mild": "Mild",
                       "moderate": "mäßig",
                       "severe": "ernst",
-                      "meal": "Essen",
-                      "supine": "Supinium",
+                      "meal": "Mahlzeit",
+                      "supine": "Rueckenlage",
                       "cough": "Husten",
                       "heartburn": "Sodbrennen",
                       "symptom1": "Symptome1",
@@ -163,7 +163,7 @@
                       "title": "Weg zur Daten",
                       "dirForDataFiles": "Verzeichnis für Datendateien"
                   },
-                  "cancel": "kündigen",
+                  "cancel": "Abbrechen",
                   "save": "Speichern"
               },
             "helpModal":{
