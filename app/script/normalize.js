@@ -7,6 +7,11 @@ function normalizeData(study) {
 	var validDateWindow = 60 * 60 * 60 * 1000; // hours * mins * secs * ms
     var results = [];
 
+    if (!data.length) {
+        // Nothing to normalize so GTFO.
+        return results;
+    }
+
     var skipped = 0;
     var badPH = 0;
 	var firstWhen = data[0].when;
