@@ -15,12 +15,8 @@
             "save": "Save"
         },
         "settings": {
-            "settings":{
-                "title":  "Settings"
-            },
-            "help": {
-                "title": "Help"
-            }
+            "settings": "Settings",
+            "help": "Help"
         },
         "newStudy": {
             "title": "New Study",
@@ -37,6 +33,7 @@
                         "male": "Male",
                         "female": "Female"
                     },
+                    "weight": "Weight",
                     "height": "Height",
                     "requiredField": "required field"
                 },
@@ -131,7 +128,7 @@
                     "state": "State",
                     "zip": "Zip",
                     "phone": "Phone"
-                  },
+                },
                 "acidNormals": {
                     "title": "Acid Normals",
                     "upright95": "Upright95",
@@ -166,14 +163,28 @@
                 "cancel": "Cancel",
                 "save": "Save"
             },
-          "helpModal":{
-            "about": "About",
-            "licenseAgreement": "License Agreement",
-            "userGuide": "User Guide",
-            "demeesterRyanScore": "DeMeester Ryan Score",
-            "normativeDataChart": "Normative Data Chart"
-          }
-
+            "helpModal":{
+                "about": "About",
+                "licenseAgreement": "License Agreement",
+                "userGuide": "User Guide",
+                "demeesterRyanScore": "DeMeester Ryan Score",
+                "normativeDataChart": "Normative Data Chart"
+            }
+        },
+        "retrievingModal":{
+            "title": "Please wait",
+            "retrieving": "Retrieving..."
+        },
+        "savingModal": {
+            "title": "Please wait"
+        },
+        "aboutModal": {
+            "title": "About",
+            "message": "This Product is licensed for use on a single site basis. Copying or redistributing this software is prohibited",
+            "version": "Software Version"
+        },
+        "userGuideModal": {
+            "title": "User Guide"
         }
     }
 }

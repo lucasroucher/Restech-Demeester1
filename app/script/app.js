@@ -311,23 +311,29 @@ function readSettings() {
         var currentLocale = Globalize.locale();
 
         if (!currentLocale || currentLocale.locale !== desiredLocale) {
-            CHANGE_LOCALE(desiredLocale).then(function() {
-                console.log('locale changed to ' + desiredLocale + ', updating messages');
-
-                $('[data-loc-text]').each(function() {
-                    var $this = $(this);
-                    var key = $this.data('locText');
-
-                    if (key) {
-                        var text = Globalize.formatMessage(key);
-                        if (!text){
-                          console.log("You have no key for" + key);
-                        }
-                        $this.text(text);
-                    }
-                });
-            });
+            updateLocale(desiredLocale);
         }
+    });
+}
+
+function updateLocale(desiredLocale) {
+    CHANGE_LOCALE(desiredLocale).then(function() {
+        console.log('locale changed to ' + desiredLocale + ', updating messages');
+
+        $('[data-loc-text]').each(function() {
+            var $this = $(this);
+            var key = $this.data('locText');
+
+            if (key) {
+                var text = Globalize.formatMessage(key);
+
+                if (!text) {
+                    console.error('message key not found %s', key);
+                }
+
+                $this.text(text);
+            }
+        });
     });
 }
 

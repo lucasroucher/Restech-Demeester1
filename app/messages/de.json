@@ -58,141 +58,137 @@
                 "cancel": "Abbrechen",
                 "save": "Speichern"
             }
-          },
-          "retrieveStudy": {
-              "title": "abrufen Studie  ",
-              "selectFile": "Datei aussuchen",
-              "change": "ändern",
-              "remove": "beseitigen",
-              "loading": "die Beladung"
-          },
-          "openStudy": {
-              "title": "Titel",
-              "selectFile": "Datei aussuchen",
-              "change": "ändern",
-              "remove": "beseitigen",
-              "browse": "Browse",
-              "loading": "die Beladung"
-          },
-          "chart":{
-              "title": "Patientenname",
-              "meal": "Mahlzeit",
-              "supine": "Rueckenlage",
-              "cough": "Husten",
-              "heartburn": "Sodbrennen",
-              "custom": "maßgeschneidert",
-              "deleteMeals": "Mahlzeiten loeschen",
-              "heartburnShort": "HB",
-              "all": " Alle"
-          },
-          "reportPage": {
-              "indication": "Hinweis",
-              "antirefluxMed": "Antireflux Med.",
-              "studyDuration": "Studiendauer",
-              "mealsRemoved": "Mahlzeiten aus der Berechnung entfernt",
-              "lastName": "Nachname",
-              "firstName": "Vorname",
-              "studyDate": "Aufzeichnungsdatum",
-              "patientID": "Patienten ID",
-              "dob": "Geburtstag",
-              "investigator": "Ermittler",
-              "referredBy": "bezeichnet durch",
-              "eventCalculations": "Ereignis Berechnungen",
-              "totalTimeOfAllpHEvents": "Gesamtzeit aller pH Ereignisse",
-              "totalPercentpHBelowBaseline": "Gesamt % pH unter Grenzwert pH",
-              "totalTimepHBelowBaselineUpright": "Gesamtzeit unter pH Grenzwert, aufrecht",
-              "totalPercentpHBelowBaselineUpright": "Gesamt % pH unter Grenzwert, aufrecht",
-              "totalTimepHBelowBaselineSupine": "Gesamtzeit unter Grenzwert pH, liegend",
-              "totalPercentpHBelowBaselineSupine": "Gesamt % unter Grenzwert pH, liegend",
-              "longestTimeEvent": "Laengste Dauer eines pH Ereignisses",
-              "numberEventsGreaterThan5Minutes": "Anzahl an Ereignissen > 5 Minuten",
-              "totalNumberOfEvents": "Gesamtanzahl  der Ereignisse",
-              "symptomCorrelation": "Symptom Korrelation",
-              "total": "GESAMT",
-              "cough": "Husten",
-              "heartburn":"Sodbrennen",
-              "patientsValue": "Patienten Wert",
-              "normalValue": "Normaler Wert",
-              "signature":"Unterschrift:",
-              "notes": "Notizen"
-          },
-          "settingsPage": {
-              "title": "Einstellungen",
-              "tabs": {
-                  "general": {
-                      "title": "Allgemein",
-                      "logo": "Logo",
-                      "selectFile": "Datei aussuchen",
-                      "change": "ändern",
-                      "remove": "beseitigen",
-                      "name": "Name",
-                      "address": "Adresse",
-                      "city": "Stadt",
-                      "state": "Bundesland",
-                      "zip": "Postleitzahl",
-                      "phone": "Telefon"
-                    },
-                  "acidNormals": {
-                      "title": "Saurer Normals",
-                      "upright95": "Aufrecht95",
-                      "supine95": "Ruecken95",
-                      "upright75": "Aufrecht75",
-                      "supine75": "Ruecken75"
-                  },
-                  "colors": {
-                      "title": "Farben",
-                      "loadDefault": "Load Default Farben",
-                      "normal": "Normal",
-                      "mild": "Mild",
-                      "moderate": "mäßig",
-                      "severe": "ernst",
-                      "meal": "Mahlzeit",
-                      "supine": "Rueckenlage",
-                      "cough": "Husten",
-                      "heartburn": "Sodbrennen",
-                      "symptom1": "Symptome1",
-                      "symptom2": "Symptome2",
-                      "symptom3": "Symptome3"
-                  },
-                  "eventSettings": {
-                      "title": "Ereigniseinstellungen",
-                      "minEventTime": "Mindestereigniszeit",
-                      "endEventThreshold": "Ende Ereignis Schwelle"
-                  },
-                  "pathToData": {
-                      "title": "Weg zur Daten",
-                      "dirForDataFiles": "Verzeichnis für Datendateien"
-                  },
-                  "cancel": "Abbrechen",
-                  "save": "Speichern"
-              },
+        },
+        "retrieveStudy": {
+            "title": "abrufen Studie  ",
+            "selectFile": "Datei aussuchen",
+            "change": "ändern",
+            "remove": "beseitigen",
+            "loading": "die Beladung"
+        },
+        "openStudy": {
+            "title": "Titel",
+            "selectFile": "Datei aussuchen",
+            "change": "ändern",
+            "remove": "beseitigen",
+            "browse": "Browse",
+            "loading": "die Beladung"
+        },
+        "chart":{
+            "title": "Patientenname",
+            "meal": "Mahlzeit",
+            "supine": "Rueckenlage",
+            "cough": "Husten",
+            "heartburn": "Sodbrennen",
+            "custom": "maßgeschneidert",
+            "deleteMeals": "Mahlzeiten loeschen",
+            "heartburnShort": "HB",
+            "all": " Alle"
+        },
+        "reportPage": {
+            "indication": "Hinweis",
+            "antirefluxMed": "Antireflux Med.",
+            "studyDuration": "Studiendauer",
+            "mealsRemoved": "Mahlzeiten aus der Berechnung entfernt",
+            "lastName": "Nachname",
+            "firstName": "Vorname",
+            "studyDate": "Aufzeichnungsdatum",
+            "patientID": "Patienten ID",
+            "dob": "Geburtstag",
+            "investigator": "Ermittler",
+            "referredBy": "bezeichnet durch",
+            "eventCalculations": "Ereignis Berechnungen",
+            "totalTimeOfAllpHEvents": "Gesamtzeit aller pH Ereignisse",
+            "totalPercentpHBelowBaseline": "Gesamt % pH unter Grenzwert pH",
+            "totalTimepHBelowBaselineUpright": "Gesamtzeit unter pH Grenzwert, aufrecht",
+            "totalPercentpHBelowBaselineUpright": "Gesamt % pH unter Grenzwert, aufrecht",
+            "totalTimepHBelowBaselineSupine": "Gesamtzeit unter Grenzwert pH, liegend",
+            "totalPercentpHBelowBaselineSupine": "Gesamt % unter Grenzwert pH, liegend",
+            "longestTimeEvent": "Laengste Dauer eines pH Ereignisses",
+            "numberEventsGreaterThan5Minutes": "Anzahl an Ereignissen > 5 Minuten",
+            "totalNumberOfEvents": "Gesamtanzahl  der Ereignisse",
+            "symptomCorrelation": "Symptom Korrelation",
+            "total": "GESAMT",
+            "cough": "Husten",
+            "heartburn":"Sodbrennen",
+            "patientsValue": "Patienten Wert",
+            "normalValue": "Normaler Wert",
+            "signature":"Unterschrift:",
+            "notes": "Notizen"
+        },
+        "settingsPage": {
+            "title": "Einstellungen",
+            "tabs": {
+                "general": {
+                    "title": "Allgemein",
+                    "logo": "Logo",
+                    "selectFile": "Datei aussuchen",
+                    "change": "ändern",
+                    "remove": "beseitigen",
+                    "name": "Name",
+                    "address": "Adresse",
+                    "city": "Stadt",
+                    "state": "Bundesland",
+                    "zip": "Postleitzahl",
+                    "phone": "Telefon"
+                },
+                "acidNormals": {
+                    "title": "Saurer Normals",
+                    "upright95": "Aufrecht95",
+                    "supine95": "Ruecken95",
+                    "upright75": "Aufrecht75",
+                    "supine75": "Ruecken75"
+                },
+                "colors": {
+                    "title": "Farben",
+                    "loadDefault": "Load Default Farben",
+                    "normal": "Normal",
+                    "mild": "Mild",
+                    "moderate": "mäßig",
+                    "severe": "ernst",
+                    "meal": "Mahlzeit",
+                    "supine": "Rueckenlage",
+                    "cough": "Husten",
+                    "heartburn": "Sodbrennen",
+                    "symptom1": "Symptome1",
+                    "symptom2": "Symptome2",
+                    "symptom3": "Symptome3"
+                },
+                "eventSettings": {
+                    "title": "Ereigniseinstellungen",
+                    "minEventTime": "Mindestereigniszeit",
+                    "endEventThreshold": "Ende Ereignis Schwelle"
+                },
+                "pathToData": {
+                    "title": "Weg zur Daten",
+                    "dirForDataFiles": "Verzeichnis für Datendateien"
+                },
+                "cancel": "Abbrechen",
+                "save": "Speichern"
+            },
             "helpModal":{
-              "about": "über",
-              "licenseAgreement": "Lizenzvereinbarung",
-              "userGuide": "Benutzerhandbuch",
-              "demeesterRyanScore": "DeMeester Ryan Score",
-              "normativeDataChart": "Normative Daten Chart"
+                "about": "über",
+                "licenseAgreement": "Lizenzvereinbarung",
+                "userGuide": "Benutzerhandbuch",
+                "demeesterRyanScore": "DeMeester Ryan Score",
+                "normativeDataChart": "Normative Daten Chart"
             }
 
-          },
-          "retrievingModal":{
-              "title": "Warten Sie mal",
-              "retrieving": "Abrufen"
-
-          },
-          "savingModal": {
-              "title": "Warten Sie mal"
-
-          },
-          "aboutModal": {
-              "title": "über",
-              "message": "Dieses Produkt ist für den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten",
-              "version": "Softwareversion"
-          },
-          "userGuideModal": {
-              "title": "Benutzerhandbuch"
-          }
-
-
+        },
+        "retrievingModal":{
+            "title": "Warten Sie mal",
+            "retrieving": "Abrufen..."
+        },
+        "savingModal": {
+            "title": "Warten Sie mal"
+        },
+        "aboutModal": {
+            "title": "über",
+            "message": "Dieses Produkt ist für den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten",
+            "version": "Softwareversion"
+        },
+        "userGuideModal": {
+            "title": "Benutzerhandbuch"
+        }
     }
 }

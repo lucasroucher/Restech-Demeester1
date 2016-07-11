@@ -21,7 +21,7 @@ $(function() {
 
     // Loads required files for all locales.
     // Safe to call more than once.
-    var init = _.memoize(function() {
+    var init = _.once(function() {
         // First we load the supplemental CLDR data we need.
         return $.when.apply($, supplementalFiles()).then(function() {
             console.log('all supplemantal CLDR data loaded');
