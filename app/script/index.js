@@ -63,6 +63,7 @@ $(function() {
 
         cmds.hideReport();
 
+        $('#notes-area').val(study.notes);
     }
 
     window.displayStudy = displayStudy;

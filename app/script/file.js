@@ -215,7 +215,8 @@ function makeFile(study) {
             //h2Blocker: !!study.h2Blocker,
             //h2Dose: study.h2Dose,
             armeds: study.armeds,
-            indication: study.indication
+            indication: study.indication,
+            notes: study.notes
         }),
         //''//, // What is this number?
         //''//, // And this one?
@@ -279,7 +280,8 @@ function makeFileOrig(study) {
             //h2Blocker: !!study.h2Blocker,
             //h2Dose: study.h2Dose,
             armeds: study.armeds,
-            indication: study.indication
+            indication: study.indication,
+            notes: study.notes
         }),
         '', // What is this number?
         '', // And this one?

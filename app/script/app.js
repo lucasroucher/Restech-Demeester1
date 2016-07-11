@@ -386,3 +386,9 @@ function updateColors() {
         }
     });
 }
+
+$('#notes-area').on('input', function() {
+    if (window.study) {
+        window.study.notes = $(this).val();
+    }
+});
