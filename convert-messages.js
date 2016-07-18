@@ -28,8 +28,8 @@ _(makeFlat(de)).toPairs().forEach(p => {
 // console.log(JSON.stringify(transformed, null, 2));
 
 // Start with a byte-order mark to get Excel to detect that it's UTF-8:
-console.log('\ufeffkey,en,de');
+console.log('\ufeffkey\ten\tde');
 
 _(transformed).toPairs().forEach(p => {
-    console.log('%s,%s,%s', p[0], JSON.stringify(p[1].en), JSON.stringify(p[1].de || ''));
+    console.log('%s\t%s\t%s', p[0], p[1].en, p[1].de || '');
 });
