@@ -90,18 +90,28 @@ $(function() {
     // The first column is the key.
     // The second column is English and will be used as the "root" messages.
     // All columns after that need to be labeled with their locale.
-    // de for German, es for Spanish, fr for French, etc.
-    // The file is supposed to be located in
+    // "de" for German, "es" for Spanish, "fr" for French, etc.
+    // The file is supposed to be located at C:\Restech\DataView\messages.tsv.
+    // If not there, falls back to app/messages/messages.tsv.
     function tsvMessageFile() {
-        var file = 'messages/messages.tsv';
+        var fs = nodeRequire('fs');
+        var path = nodeRequire('path');
+        var root = nodeRequire('./host/config').root;
+        var file = path.join(root, 'messages.tsv');
+
+        if (!fs.existsSync(file)) {
+            file = 'messages/messages.tsv';
+        }
+
+        console.log('loading messages from %s', file);
+
         return $.get(file).then(function(result) {
             var json = convertTSVtoJSON(result);
-            console.log('messages:');
             console.log(json);
             Globalize.loadMessages(json);
-            console.log('loaded ' + file);
+            console.log('done loading %s', file);
         }, function(err) {
-            console.error('error loading ' + file);
+            console.error('error loading %s', file);
         });
     }
 
