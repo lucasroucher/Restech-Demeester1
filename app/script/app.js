@@ -349,6 +349,21 @@ function updateLocale(desiredLocale) {
                 $this.val(val);
             }
         });
+
+        $('[data-loc-title]').each(function() {
+            var $this = $(this);
+            var key = $this.data('locTitle');
+
+            if (key) {
+                var val = Globalize.formatMessage(key);
+
+                if (!val) {
+                    console.error('message key not found %s', key);
+                }
+
+                $this.attr('title', val);
+            }
+        });
     });
 }
 

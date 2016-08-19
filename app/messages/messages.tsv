@@ -3,7 +3,8 @@ noData/title	Sorry	Entschuldigung!
 noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefunden wurde.
 fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.
 menu/new	New	Neu
-menu/retrieve	Retrieve	Aufzeichnung
+menu/retrieve/text	Retrieve	Aufzeichnung
+menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung...
 menu/open	Open	Oeffnen
 menu/printPrev	Print Preview	Druckvorschau
 menu/report	Report	Bericht
@@ -37,7 +38,7 @@ newStudy/tabs/studyDetails/indication	Indication	Indikation
 newStudy/tabs/studyDetails/antirefluxMed	Antireflux Med.	Antireflux Med.
 newStudy/tabs/cancel	Cancel	Abbrechen
 newStudy/tabs/save	Save	Speichern
-retrieveStudy/title	Retrieve Study	abrufen Studie  
+retrieveStudy/title	Retrieve Study	abrufen Studie
 retrieveStudy/selectFile	Select File	Datei aussuchen
 retrieveStudy/change	Change	ändern
 retrieveStudy/remove	Remove	beseitigen
