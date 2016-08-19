@@ -74,7 +74,9 @@
         "chart":{
             "title": "Patient Name",
             "meal": "Meal",
+            "mealShort": "Meal",
             "supine": "Supine",
+            "supineShort": "Supine",
             "cough": "Cough",
             "heartburn": "Heartburn",
             "custom": "Custom",

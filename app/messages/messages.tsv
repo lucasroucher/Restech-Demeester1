@@ -1,4 +1,4 @@
-﻿key	en	de
+key	en	de
 noData/title	Sorry	Entschuldigung!
 noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefunden wurde.
 fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.
@@ -51,7 +51,9 @@ openStudy/browse	Browse	Browse
 openStudy/loading	Loading	die Beladung
 chart/title	Patient Name	Patientenname
 chart/meal	Meal	Mahlzeit
+chart/mealShort	Meal	Essen
 chart/supine	Supine	Rueckenlage
+chart/supineShort	Supine	Rücken
 chart/cough	Cough	Husten
 chart/heartburn	Heartburn	Sodbrennen
 chart/custom	Custom	maßgeschneidert
