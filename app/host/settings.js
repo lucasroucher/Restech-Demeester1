@@ -50,6 +50,12 @@ module.exports = exports = {
                 parsed[key] = settings[key];
             }
 
+            for (var key in defaults) {
+                if (!parsed.hasOwnProperty(key)) {
+                    parsed[key] = defaults[key];
+                }
+            }
+
             fs.writeFile(settingsPath, JSON.stringify(parsed, null, 2), { encoding: 'utf8' }, function(err) {
                 if (err) {
                     logger.log('error writing settings: ' + err);

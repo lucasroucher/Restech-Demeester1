@@ -1,5 +1,6 @@
 module.exports = {
     dataDir: "C:\\Restech\\DataView\\data",
+    locale: 'en',
     img: 'img/192x49.gif',
     name: 'Name',
     address: 'Address',
