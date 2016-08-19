@@ -4,12 +4,14 @@ noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefun
 fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.
 menu/new	New	Neu
 menu/retrieve/text	Retrieve	Aufzeichnung
-menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung...
-menu/open	Open	Oeffnen
+menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung Studie
+menu/open/text	Open	Oeffnen
+menu/open/tooltip	Open Study	Studie Oeffnen
 menu/printPrev	Print Preview	Druckvorschau
 menu/report	Report	Bericht
 menu/graph	Graph	Schaubild
-menu/save	Save	Speichern
+menu/save/text	Save	Speichern
+menu/save/tooltip	Save study to disk	Speichern Studie
 settings/settings	Settings	Einstellungen
 settings/help	Help	Hilfe
 newStudy/title	New Study	Neue Aufzeichnung
@@ -33,7 +35,7 @@ newStudy/tabs/studyDetails/title	Study Details	Studiendetails
 newStudy/tabs/studyDetails/technician	Technician	Aerztliche Hilfskraft
 newStudy/tabs/studyDetails/physician	Physician	Arzt
 newStudy/tabs/studyDetails/refPhysician	Ref Physician	Ueberweisender Arzt
-newStudy/tabs/studyDetails/studyType	Study Type	Aufzeichnungstyp
+newStudy/tabs/BenutzerdefinierttudyDetails/studyType	Study Type	Aufzeichnungstyp
 newStudy/tabs/studyDetails/indication	Indication	Indikation
 newStudy/tabs/studyDetails/antirefluxMed	Antireflux Med.	Antireflux Med.
 newStudy/tabs/cancel	Cancel	Abbrechen
@@ -43,7 +45,7 @@ retrieveStudy/selectFile	Select File	Datei aussuchen
 retrieveStudy/change	Change	ändern
 retrieveStudy/remove	Remove	beseitigen
 retrieveStudy/loading	Loading	die Beladung
-openStudy/title	Title	Titel
+openStudy/titleTitle	Titel
 openStudy/selectFile	Select File	Datei aussuchen
 openStudy/change	Change	ändern
 openStudy/remove	Remove	beseitigen
@@ -56,10 +58,17 @@ chart/supine	Supine	Rueckenlage
 chart/supineShort	Supine	Rücken
 chart/cough	Cough	Husten
 chart/heartburn	Heartburn	Sodbrennen
-chart/custom	Custom	maßgeschneidert
+chart/custom	Custom	Benutzerdefiniert
 chart/deleteMeals	Delete Meals	Mahlzeiten loeschen
 chart/heartburnShort	HB	HB
 chart/all	 All	 Alle
+chart/dropdownAdd/tooltip	Add period to pH data in a range	Hinzufüge in markierter Positionen
+chart/dropdownClear/tooltip	Clear periods from pH data in a range	Entfernen in markierter Positionen
+chart/del/tooltip	Delete pH data and periods in a range	Löschen der markierten Positionen
+chart/undo/tooltip	Undo the last undoable command	Letzte Eingabe rückgängig machen
+chart/zoomIn/tooltip	Zoom in on pH data in selected range	Zoom des markierten Bereichs
+chart/zoomOut/tooltip	Zoom out	Zoom aus
+chart/adjustScale/tooltip	Adjust pH scale	pH Skala anpassen
 reportPage/indication	Indication	Hinweis
 reportPage/antirefluxMed	Antireflux Med	Antireflux Med.
 reportPage/studyDuration	Study Duration	Studiendauer

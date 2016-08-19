@@ -34,11 +34,11 @@
                 <ul class="nav navbar-nav hide-before-ready">
                     <li><a href="#newModal" data-toggle="modal" data-loc-text="menu/new">New</a></li>
                     <li><a id="retrieveLink" href="#retrieveModal" data-toggle="modal" data-loc-title="menu/retrieve/tooltip" title="Retrieve study from data card" data-loc-text="menu/retrieve/text">Retrieve</a></li>
-                    <li><a id="openLink" href="#openModal" data-toggle="modal" title="Open saved study" data-loc-text="menu/open">Open</a></li>
+                    <li><a id="openLink" href="#openModal" data-toggle="modal" data-loc-title="menu/open/tooltip" title="Open Study" data-loc-text="menu/open/text">Open</a></li>
                     <li><a href="#" data-cmd="print" data-loc-text="menu/printPrev">Print Preview</a></li>
                     <li class="report-hide"><a href="#" data-cmd="showReport" data-loc-text="menu/report">Report</a></li>
                     <li class="report-only hide"><a href="#" data-cmd="hideReport" data-loc-text="menu/graph">Graph</a></li>
-                    <li><a href="#" data-cmd="saveFile" title="Save study to disk" data-loc-text="menu/save">Save</a></li>
+                    <li><a href="#" data-cmd="saveFile" data-loc-title="menu/save/tooltip" title="Save study to disk" data-loc-text="menu/save/text">Save</a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a href="#settingsModal" data-toggle="modal" data-loc-text="settings/settings">Settings</a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a href="#helpModal" data-toggle="modal" data-loc-text="settings/help">Help</a></li>
                 </ul>
@@ -65,7 +65,7 @@
                 <div class="btn-toolbar">
                     <div class="btn-group">
                         <div class="btn-group">
-                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Add period to pH data in a range" type="button">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" data-loc-title="chart/dropdownAdd/tooltip" title="Add period to pH data in a range" type="button">
                                 <i class="glyphicon glyphicon-edit"></i>
                                 <span class="caret"></span>
                             </button>
@@ -80,7 +80,7 @@
                             </ul>
                         </div>
                         <div class="btn-group">
-                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Clear periods from pH data in a range" type="button">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" data-loc-title="chart/dropdownClear/tooltip" title="Clear periods from pH data in a range" type="button">
                                 <i class="glyphicon glyphicon-remove"></i>
                                 <span class="caret"></span>
                             </button>
@@ -95,12 +95,12 @@
                                 <li><a href="#" data-cmd="clearAll">All</a></li>
                             </ul>
                         </div>
-                        <button class="btn btn-default tip" data-cmd="del" title="Delete pH data and periods in a range" type="button"><i class="glyphicon glyphicon-trash"></i></button>
-                        <button class="btn btn-default tip" data-cmd="undo" title="Undo the last undoable command" type="button"><i class="fa fa-undo"></i></button>
-                        <button class="btn btn-default tip" data-cmd="zoomIn" title="Zoom in on pH data in selected range" type="button"><i class="glyphicon glyphicon-zoom-in"></i></button>
-                        <button class="btn btn-default tip" data-cmd="zoomOut" title="Zoom out" type="button"><i class="glyphicon glyphicon-zoom-out"></i></button>
+                        <button class="btn btn-default tip" data-cmd="del" data-loc-title="chart/del/tooltip" title="Delete pH data and periods in a range" type="button"><i class="glyphicon glyphicon-trash"></i></button>
+                        <button class="btn btn-default tip" data-cmd="undo" data-loc-title="chart/undo/tooltip" title="Undo the last undoable command" type="button"><i class="fa fa-undo"></i></button>
+                        <button class="btn btn-default tip" data-cmd="zoomIn" data-loc-title="chart/zoomIn/tooltip" title="Zoom in on pH data in selected range" type="button"><i class="glyphicon glyphicon-zoom-in"></i></button>
+                        <button class="btn btn-default tip" data-cmd="zoomOut" data-loc-title="chart/zoomOut/tooltip" title="Zoom out" type="button"><i class="glyphicon glyphicon-zoom-out"></i></button>
                         <div class="btn-group">
-                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" title="Adjust pH scale" type="button">
+                            <button class="btn btn-default dropdown-toggle tip" data-toggle="dropdown" data-loc-title="chart/adjustScale/tooltip" title="Adjust pH scale" type="button">
                                 <i class="glyphicon glyphicon-resize-vertical"></i>
                                 <span class="caret"></span>
                             </button>
