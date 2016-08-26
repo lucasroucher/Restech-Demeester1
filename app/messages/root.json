@@ -7,12 +7,18 @@
         "fileCountMessage": "Displaying {displayCount} out of {archiveCount} files in the archive.",
         "menu": {
             "new": "New",
-            "retrieve": "Retrieve",
+            "retrieve":{
+                "text": "Retrieve",
+                "tooltip": "Retrieve study from data card"
+            },
             "open": "Open",
             "printPrev": "Print Preview",
             "report": "Report",
             "graph": "Graph",
-            "save": "Save"
+            "save": {
+              "text": "Save",
+              "tooltip": "Save Study to Disk"
+              }
         },
         "settings": {
             "settings": "Settings",

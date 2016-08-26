@@ -7,12 +7,18 @@
         "fileCountMessage": "Es werden {displayCount} von {archiveCount} Dateien im Archiv.",
         "menu": {
             "new": "Neu",
-            "retrieve": "Aufzeichnung",
+            "retrieve": {
+                "text": "Aufzeichnung",
+                "tooltip": "Aufzeichnung Studie"
+              },
             "open": "Oeffnen",
             "printPrev": "Druckvorschau",
             "report": "Bericht",
             "graph": "Schaubild",
-            "save": "Speichern"
+            "save": {
+              "text": "Speichern",
+              "tooltip": "Speichern Studie"
+            }
         },
         "settings": {
             "settings": "Einstellungen",
