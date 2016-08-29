@@ -35,7 +35,7 @@ newStudy/tabs/studyDetails/title	Study Details	Studiendetails
 newStudy/tabs/studyDetails/technician	Technician	Aerztliche Hilfskraft
 newStudy/tabs/studyDetails/physician	Physician	Arzt
 newStudy/tabs/studyDetails/refPhysician	Ref Physician	Ueberweisender Arzt
-newStudy/tabs/BenutzerdefinierttudyDetails/studyType	Study Type	Aufzeichnungstyp
+newStudy/tabs/studyDetails/studyType	Study Type	Aufzeichnungstyp
 newStudy/tabs/studyDetails/indication	Indication	Indikation
 newStudy/tabs/studyDetails/antirefluxMed	Antireflux Med.	Antireflux Med.
 newStudy/tabs/cancel	Cancel	Abbrechen
