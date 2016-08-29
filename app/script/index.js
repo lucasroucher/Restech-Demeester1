@@ -211,6 +211,7 @@ $(function() {
                 height:         $('#height').val(),
                 physician:      $('#physician').val(),
                 refPhysician:   $('#refPhysician').val(),
+                technician:     $('#technician').val(),
                 symptomNames:   [ $('#custom1').val(), $('#custom2').val(), $('#custom3').val() ],
                 ppiAM:          $('#ppiAm').prop('checked'),
                 ppiPM:          $('#ppiPm').prop('checked'),
