@@ -59,8 +59,8 @@ chart/supineShort	Supine	Rücken
 chart/cough	Cough	Husten
 chart/heartburn	Heartburn	Sodbrennen
 chart/custom	Custom	Benutzerdefiniert
-chart/deleteMeals	Delete Meals	Mahlzeiten loeschen
-chart/undeleteMeals	Undelete Meals	UnMahlzeiten loeschen
+chart/deleteMeals	Delete Meals	Essen loeschen
+chart/undeleteMeals	Undelete Meals	Essen loeschung
 chart/heartburnShort	HB	HB
 chart/all	 All	 Alle
 chart/dropdownAdd/tooltip	Add period to pH data in a range	Hinzufüge in markierter Positionen
@@ -80,7 +80,8 @@ reportPage/studyDate	Study Date	Aufzeichnungsdatum
 reportPage/patientID	Patient #	Patienten ID
 reportPage/dob	D.O.B	Geburtstag
 reportPage/investigator	Investigator	Ermittler
-reportPage/referredBy	Referred By	bezeichnet durch
+reportPage/referredBy	Referred By	Bezeichnet Durch
+reportPage/technician	Technician	Aerztliche Hilfskraft
 reportPage/eventCalculations	EVENT CALCULATIONS	Ereignis Berechnungen
 reportPage/totalTimeOfAllpHEvents	Total time of all pH events	Gesamtzeit aller pH Ereignisse
 reportPage/totalPercentpHBelowBaseline	Total % pH below baseline	Gesamt % pH unter Grenzwert pH
