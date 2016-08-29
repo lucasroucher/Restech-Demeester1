@@ -38,6 +38,7 @@ $(function() {
         $('.study-height').text(study.height);
         $('.study-physician').output(study.physician);
         $('.study-refPhysician').output(study.refPhysician);
+        $('.study-technician').output(study.technician);
 
         $('.symptom1name').output(study.symptomNames[0] || 'Symptom 1');
         $('.symptom2name').output(study.symptomNames[1] || 'Symptom 2');
