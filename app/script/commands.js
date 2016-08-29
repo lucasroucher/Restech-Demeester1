@@ -295,7 +295,7 @@ var cmds = (function() {
         flagDelMeals: function(el, study) {
             if (study.delMeals) {
                 study.delMeals = false;
-                $(el).text('Delete Meals');
+                $(el).text(Globalize.formatMessage('chart/deleteMeals'));
             } else {
                 bootbox.prompt({
                     title: 'Delete how many minutes before/after each meal period?',
@@ -303,7 +303,7 @@ var cmds = (function() {
                     callback: function(value) {
                         console.log(value);
                         study.delMeals = +value;
-                        $(el).text(study.delMeals ? 'Undelete Meals' : 'Delete Meals');
+                        $(el).text(study.delMeals ? Globalize.formatMessage('chart/undeleteMeals') : Globalize.formatMessage('chart/deleteMeals'));
                     }
                 });
             }

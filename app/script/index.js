@@ -25,7 +25,7 @@ $(function() {
         cmds.clearUndoables();
         console.log(study);
 
-        $('button[data-cmd="flagDelMeals"]').text('Delete Meals');
+        $('button[data-cmd="flagDelMeals"]').text(Globalize.formatMessage('chart/deleteMeals'));
 
         $('#patientName').text(study.firstName + ' ' + study.lastName);
         $('.study-lastName').output(study.lastName);

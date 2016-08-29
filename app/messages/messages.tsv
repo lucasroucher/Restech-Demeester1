@@ -60,6 +60,7 @@ chart/cough	Cough	Husten
 chart/heartburn	Heartburn	Sodbrennen
 chart/custom	Custom	Benutzerdefiniert
 chart/deleteMeals	Delete Meals	Mahlzeiten loeschen
+chart/undeleteMeals	Undelete Meals	UnMahlzeiten loeschen
 chart/heartburnShort	HB	HB
 chart/all	 All	 Alle
 chart/dropdownAdd/tooltip	Add period to pH data in a range	Hinzufüge in markierter Positionen
