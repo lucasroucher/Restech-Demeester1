@@ -325,13 +325,16 @@ function updateLocale(desiredLocale) {
             var key = $this.data('locText');
 
             if (key) {
-                var text = Globalize.formatMessage(key);
-
-                if (!text) {
-                    console.error('message key not found %s', key);
+                try {
+                    var val = Globalize.formatMessage(key);
+                } catch (err) {
                 }
 
-                $this.text(text);
+                if (!val) {
+                    console.error('message key %s not found', key);
+                }
+
+                $this.text(val);
             }
         });
 
@@ -340,10 +343,13 @@ function updateLocale(desiredLocale) {
             var key = $this.data('locVal');
 
             if (key) {
-                var val = Globalize.formatMessage(key);
+                try {
+                    var val = Globalize.formatMessage(key);
+                } catch (err) {
+                }
 
                 if (!val) {
-                    console.error('message key not found %s', key);
+                    console.error('message key %s not found', key);
                 }
 
                 $this.val(val);
@@ -355,13 +361,20 @@ function updateLocale(desiredLocale) {
             var key = $this.data('locTitle');
 
             if (key) {
-                var val = Globalize.formatMessage(key);
-
-                if (!val) {
-                    console.error('message key not found %s', key);
+                try {
+                    var val = Globalize.formatMessage(key);
+                } catch (err) {
                 }
 
-                $this.attr('title', val);
+                if (!val) {
+                    console.error('message key %s not found', key);
+                }
+
+                if ($this.hasClass('tip')) {
+                    $this.attr('data-original-title', val);
+                } else {
+                    $this.attr('title', val);
+                }
             }
         });
     });
