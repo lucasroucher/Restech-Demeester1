@@ -232,11 +232,11 @@ var cmds = (function() {
 
             newTitle += '_' + currentlyShowing;
 
-            document.title = newTitle;
+            //document.title = newTitle;
 
-            // window.print();
+            window.print();
 
-            const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
+            /*const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
             const dialog = nodeRequire('electron').remote.dialog;
             const fs = nodeRequire('fs');
             const win = BrowserWindow.getFocusedWindow();
@@ -259,7 +259,7 @@ var cmds = (function() {
                       console.log('PDF saved successfully');
                   });
                 });
-            });
+            });*/
         },
 
         delMeals: function(el, study) {

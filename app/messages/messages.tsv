@@ -7,7 +7,7 @@ menu/retrieve/text	Retrieve	Aufzeichnung
 menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung Studie
 menu/open/text	Open	Oeffnen
 menu/open/tooltip	Open Study	Studie Oeffnen
-menu/printPrev	Print Preview	Druckvorschau
+menu/printPrev	Print	Druckvorschau
 menu/report	Report	Bericht
 menu/graph	Graph	Schaubild
 menu/save/text	Save	Speichern
