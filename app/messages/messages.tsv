@@ -1,7 +1,7 @@
 key	en	de
 noData/title	Sorry	Entschuldigung!
-noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefunden wurde.
-fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.
+noData/text	No PatientData.txt file was found.	Es wurde keine PatientData.txt Datei gefunden.
+fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Anzeigen von ? aus ? Dateien aus dem Archiv.
 menu/new	New	Neu
 menu/retrieve/text	Retrieve	Aufzeichnung
 menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung Studie
@@ -9,7 +9,7 @@ menu/open/text	Open	Oeffnen
 menu/open/tooltip	Open Study	Studie Oeffnen
 menu/printPrev	Print	Druckvorschau
 menu/report	Report	Bericht
-menu/graph	Graph	Schaubild
+menu/graph	Graph	Graph
 menu/save/text	Save	Speichern
 menu/save/tooltip	Save study to disk	Speichern Studie
 settings/settings	Settings	Einstellungen
@@ -28,9 +28,9 @@ newStudy/tabs/patientDetails/weight	Weight	Gewicht
 newStudy/tabs/patientDetails/height	Height	Groesse
 newStudy/tabs/patientDetails/requiredField	required field	Pflicht-Feld
 newStudy/tabs/customSymptoms/title	Custom Symptoms	Patientenspezifische Symptome
-newStudy/tabs/customSymptoms/symptom1	Symptom 1	Symptome 1
-newStudy/tabs/customSymptoms/symptom2	Symptom 2	Symptome 2
-newStudy/tabs/customSymptoms/symptom3	Symptom 3	Symptome 3
+newStudy/tabs/customSymptoms/symptom1	Symptom 1	Symptom 1
+newStudy/tabs/customSymptoms/symptom2	Symptom 2	Symptom 2
+newStudy/tabs/customSymptoms/symptom3	Symptom 3	Symptom 3
 newStudy/tabs/studyDetails/title	Study Details	Studiendetails
 newStudy/tabs/studyDetails/technician	Technician	Aerztliche Hilfskraft
 newStudy/tabs/studyDetails/physician	Physician	Arzt
@@ -142,8 +142,8 @@ settingsPage/helpModal/licenseAgreement	License Agreement	Lizenzvereinbarung
 settingsPage/helpModal/userGuide	User Guide	Benutzerhandbuch
 settingsPage/helpModal/demeesterRyanScore	DeMeester Ryan Score	DeMeester Ryan Score
 settingsPage/helpModal/normativeDataChart	Normative Data Chart	Normative Daten Chart
-retrievingModal/title	Please wait	Warten Sie mal
-retrievingModal/retrieving	Retrieving...	Abrufen...
+retrievingModal/title	Please wait	Bitte Warten
+retrievingModal/retrieving	Retrieving...	Studie herunterladen...
 savingModal/title	Please wait	Warten Sie mal
 aboutModal/title	About	über
 aboutModal/message	This Product is licensed for use on a single site basis. Copying or redistributing this software is prohibited	Dieses Produkt ist für den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten
