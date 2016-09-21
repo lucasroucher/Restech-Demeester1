@@ -232,9 +232,11 @@ var cmds = (function() {
 
             newTitle += '_' + currentlyShowing;
 
-            //document.title = newTitle;
+            document.title = newTitle;
 
             window.print();
+
+            document.title = 'Restech DataView';
 
             /*const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
             const dialog = nodeRequire('electron').remote.dialog;
