@@ -1,4 +1,5 @@
 var cmds = (function() {
+    var printToPDF = false;
 
     var currentlyShowing = 'graph';
 
@@ -228,40 +229,57 @@ var cmds = (function() {
         print: function() {
             // console.log(study);
 
+            const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
+            const win = BrowserWindow.getFocusedWindow();
+
             var newTitle = study.lastName + ' ' + study.firstName + ' ' + study.studyDate;
 
             newTitle += '_' + currentlyShowing;
 
             document.title = newTitle;
 
-            window.print();
+            if (printToPDF) {
+                const dialog = nodeRequire('electron').remote.dialog;
+                const fs = nodeRequire('fs');
 
-            document.title = 'Restech DataView';
+                dialog.showSaveDialog(win, {
+                    title: 'Save as PDF',
+                    defaultPath: newTitle + '.pdf'
+                }, function(filename) {
+                    console.log('saving PDF to %s', filename);
 
-            /*const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
-            const dialog = nodeRequire('electron').remote.dialog;
-            const fs = nodeRequire('fs');
-            const win = BrowserWindow.getFocusedWindow();
+                    win.webContents.printToPDF({
+                        marginsType: 2, // 0 = default margin, 1 = no margin, 2 = minimal margin
+                        printBackground: false
+                    }, function(err, data) {
+                        if (err) throw err;
 
-            dialog.showSaveDialog(win, {
-                title: 'Save as PDF',
-                defaultPath: newTitle + '.pdf'
-            }, function(filename) {
-                console.log('saving PDF to %s', filename);
+                        fs.writeFile(filename, data, function(err) {
+                          if (err) throw err;
 
-                win.webContents.printToPDF({
-                    marginsType: 2, // 0 = default margin, 1 = no margin, 2 = minimal margin
-                    printBackground: false
-                }, function(err, data) {
-                    if (err) throw err;
+                          console.log('PDF saved successfully');
 
-                    fs.writeFile(filename, data, function(err) {
-                      if (err) throw err;
-
-                      console.log('PDF saved successfully');
-                  });
+                          restoreTitle();
+                      });
+                    });
                 });
-            });*/
+            } else {
+                console.log('begin printing');
+
+                // window.print();
+
+                win.webContents.print({
+                    printBackground: true
+                });
+
+                console.log('done printing');
+
+                restoreTitle();
+            }
+
+            function restoreTitle() {
+                document.title = 'Restech DataView';
+            }
         },
 
         delMeals: function(el, study) {
