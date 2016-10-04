@@ -1,5 +1,5 @@
 var cmds = (function() {
-    var printToPDF = false;
+    var printToPDF = true;
 
     var currentlyShowing = 'graph';
 
@@ -233,8 +233,10 @@ var cmds = (function() {
             const win = BrowserWindow.getFocusedWindow();
 
             var newTitle = study.lastName + ' ' + study.firstName + ' ' + study.studyDate;
-
+            var graph = false;
             newTitle += '_' + currentlyShowing;
+            if(currentlyShowing == 'graph')
+              graph = true;
 
             document.title = newTitle;
 
@@ -250,7 +252,8 @@ var cmds = (function() {
 
                     win.webContents.printToPDF({
                         marginsType: 2, // 0 = default margin, 1 = no margin, 2 = minimal margin
-                        printBackground: false
+                        printBackground: true,
+                        landscape: graph
                     }, function(err, data) {
                         if (err) throw err;
 
