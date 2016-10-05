@@ -251,7 +251,8 @@ var cmds = (function() {
                     console.log('saving PDF to %s', filename);
 
                     win.webContents.printToPDF({
-                        marginsType: 2, // 0 = default margin, 1 = no margin, 2 = minimal margin
+                        marginsType: 0, // 0 = default margin, 1 = no margin, 2 = minimal margin
+                        pageSize: 'Letter',
                         printBackground: true,
                         landscape: graph
                     }, function(err, data) {
