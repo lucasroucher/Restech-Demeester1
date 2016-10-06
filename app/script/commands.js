@@ -257,7 +257,7 @@ var cmds = (function() {
                         landscape: graph
                     }, function(err, data) {
                         if (err) throw err;
-
+                        if(filename){
                         fs.writeFile(filename, data, function(err) {
                           if (err) throw err;
 
@@ -265,6 +265,8 @@ var cmds = (function() {
 
                           restoreTitle();
                       });
+                    }
+                    restoreTitle();
                     });
                 });
             } else {
