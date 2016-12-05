@@ -114,17 +114,17 @@ function discoverPeriods(study) {
 
     normalizeSymptoms(study, 1);
     normalizeSymptoms(study, 3);
-    normalizeSymptoms(study, 5);
-    normalizeSymptoms(study, 6);
     normalizeSymptoms(study, 7);
+    normalizeSymptoms(study, 6);
+    normalizeSymptoms(study, 5);
 
     study.coughPeriods = findPeriods(study, 'symptom', 1);
     study.heartburnPeriods = findPeriods(study, 'symptom', 3);
 
     study.symptoms = [];
-    study.symptoms[0] = findPeriods(study, 'symptom', 5);
+    study.symptoms[0] = findPeriods(study, 'symptom', 7);
     study.symptoms[1] = findPeriods(study, 'symptom', 6);
-    study.symptoms[2] = findPeriods(study, 'symptom', 7);
+    study.symptoms[2] = findPeriods(study, 'symptom', 5);
 
     console.log('meals: ' + study.meals.length);
     console.log('supines: ' + study.supines.length);
