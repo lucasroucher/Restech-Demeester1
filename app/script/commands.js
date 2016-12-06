@@ -231,6 +231,8 @@ var cmds = (function() {
 
             const BrowserWindow = nodeRequire('electron').remote.BrowserWindow;
             const win = BrowserWindow.getFocusedWindow();
+            const shell = nodeRequire('electron').shell;
+            console.log("Did this throw up???");
 
             var newTitle = study.lastName + ' ' + study.firstName + ' ' + study.studyDate;
             var graph = false;
@@ -262,6 +264,10 @@ var cmds = (function() {
                           if (err) throw err;
 
                           console.log('PDF saved successfully');
+                          shell.openItem(filename);
+                          //console.log("Did that error??");
+
+
 
                           restoreTitle();
                       });
