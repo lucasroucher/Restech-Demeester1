@@ -24,7 +24,7 @@ function updateReport(study) {
     $('#delMealsNote').hide();
 
     var unmodifiedStudy = study;
-	console.log('EventMinTime :' + CONFIG.eventDuration + ' :: percent ' + CONFIG.eventPercentLevel );
+	  console.log('EventMinTime :' + CONFIG.eventDuration + ' :: percent ' + CONFIG.eventPercentLevel );
     if (study.delMeals) {
         console.log('delete meals with padding: ' + study.delMeals);
         $('#delMealsNote').show();
@@ -169,7 +169,7 @@ function updateReport(study) {
         uprightPercents: uprightPercents,
         supinePercents: supinePercents
     });
-	console.log("Upright Normals : " + CONFIG.acidNormals.upright[0] + " : " + CONFIG.acidNormals.upright[1]);
+	  console.log("Upright Normals : " + CONFIG.acidNormals.upright[0] + " : " + CONFIG.acidNormals.upright[1]);
     var ryan = getRyanScore(unmodifiedStudy);
 
     $('td.ryan-supine').text(ryan.supine.toFixed(2));
@@ -345,29 +345,46 @@ function getEventsUnder(baseline, data) {
     var endIndex = null;
     var endEventThreshold = baseline + +CONFIG.endEventThreshold;
     var thresholdStartTime = null;
+    var setter = true;
 
     for (var i = 0, n = data.length; i < n; i++) {
         datum = data[i];
 
         // skip holes
-        if (datum.val === null) continue;
+        if (datum.val === null){
+          // If there is an event but we remove the meals the event needs to end
+          if (startIndex && setter){
+            // end the event
+            endIndex = i;
+            //console.log("*** End Event *** " + i);
+            setter = false;
+            events.push({
+                start: data[startIndex],
+                end:   data[endIndex],
+                dur:   data[endIndex].when - data[startIndex].when
+            });
+            startIndex = null;
+          }
+          // No event, just skip the holes
+          continue;
+        }
 
         // is this the start or continuation of an event?
         if (datum.val < baseline) {
             // if an event hasn't started, this is it
             if (startIndex === null) {
                 startIndex = i;
+                setter = true;
             }
 
             // start or keep looking for a possible end to this event
             endIndex = null;
             thresholdStartTime = null;
-        } else if (startIndex !== null && datum.val >= baseline) {
+        } else if (startIndex !== null && datum.val >= baseline ) {
             if (endIndex === null) {
                 endIndex = i;
             }
-
-            if (datum.val >= endEventThreshold) {
+            if (datum.val >= endEventThreshold ) {
                 if (thresholdStartTime === null) {
                     // the value has to stay above the threshold for minEventTime seconds
                     // minEventTime should really be named minThresholdEventTime or whatever

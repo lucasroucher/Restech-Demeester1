@@ -2,13 +2,14 @@ function getRyanScore(study) {
     console.log('calculating RYAN score:');
 
     var dataWithoutMeals = getDataWithoutMeals(study);
+    var fakeStudy = study;
     var studyTime = _.filter(dataWithoutMeals, function(d) { return d.val !== null; }).length * 500;
 
     console.log('data length before removing meals: ' + study.data.length);
     console.log('data length after removing meals: ' + dataWithoutMeals.length);
 
-    var lt50 = getStatsForBaseline(5.0, dataWithoutMeals, study);
-    var lt55 = getStatsForBaseline(5.5, dataWithoutMeals, study);
+    var lt50 = getStatsForBaseline(5.0, dataWithoutMeals, fakeStudy);
+    var lt55 = getStatsForBaseline(5.5, dataWithoutMeals, fakeStudy);
 
     console.log('supine events for RYAN:');
     console.log(lt50.supine);
@@ -96,6 +97,10 @@ function getDataWithoutMeals2(study) {
         var datum = study.data[i];
 
         if (datum.meal) {
+            // Need to add a non event value to the datum to end a possible event scenario
+            newData[newData.length - MEAL_BUFFER_COUNT-1].val = null;
+            //console.log("Value in newData After buff " + newData[newData.length -MEAL_BUFFER_COUNT-1].val);
+            //newData[i-MEAL_BUFFER_COUNT].datum.val=7.5;
             // Remove data before meal.
             newData = newData.slice(0, -MEAL_BUFFER_COUNT);
 
@@ -110,6 +115,5 @@ function getDataWithoutMeals2(study) {
             newData.push(datum);
         }
     }
-
     return newData;
 }
