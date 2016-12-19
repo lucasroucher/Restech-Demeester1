@@ -435,3 +435,23 @@ $('#notes-area').on('input', function() {
         window.study.notes = $(this).val();
     }
 });
+
+var signaturePad;
+var signaturePadHeight = 300;
+
+$('#signaturePadModal').on('shown.bs.modal', function(e) {
+    if (!signaturePad) {
+        var canvas = $('<canvas>').appendTo('#signaturePadContainer')[0];
+
+        // var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+        var ratio = 1;
+        canvas.width = $(canvas.parentElement).width() * ratio;
+        canvas.height = signaturePadHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+
+        // https://github.com/szimek/signature_pad
+        signaturePad = new SignaturePad(canvas);
+    }
+
+    signaturePad.clear();
+});

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="style/colors.css">
     <link rel="stylesheet" href="style/report.css">
+    <link rel="stylesheet" href="style/sign.css">
     <link rel="stylesheet" href="style/print.css" media="print">
 </head>
 <body class="before-ready">
@@ -43,6 +44,7 @@
                     <li class="report-hide"><a href="#" data-cmd="showReport" data-loc-text="menu/report">Report</a></li>
                     <li class="report-only hide"><a href="#" data-cmd="hideReport" data-loc-text="menu/graph">Graph</a></li>
                     <li><a href="#" data-cmd="saveFile" data-loc-title="menu/save/tooltip" title="Save study to disk" data-loc-text="menu/save/text">Save</a></li>
+                    <li><a href="#signaturePadModal" data-toggle="modal" data-loc-title="menu/sign/tooltip" title="Show signature pad" data-loc-text="menu/sign/text">Sign</a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a href="#settingsModal" data-toggle="modal" data-loc-text="settings/settings">Settings</a></li>
                     <li class="hidden-sm hidden-md hidden-lg"><a href="#helpModal" data-toggle="modal" data-loc-text="settings/help">Help</a></li>
                 </ul>
@@ -1045,6 +1047,7 @@
             </div>
         </div>
     </div>
+
 	<div id="userGuideModal" class="modal fade" tabindex="-1">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -1061,6 +1064,20 @@
 		</div>
 	</div>
 
+    <div id="signaturePadModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Restech DataView</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="signaturePadContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- scripts -->
     <div>
         <script src="script/electron.js"></script>
@@ -1076,6 +1093,7 @@
         <script src="lib/bootbox.js"></script>
         <script src="lib/d3.v3.js"></script>
         <script src="lib/simplify.js"></script>
+        <script src="lib/signature_pad-1.5.3/signature_pad.js"></script>
 
         <!-- Scripts for internationalization. -->
         <!-- Files to load are documented here: -->
