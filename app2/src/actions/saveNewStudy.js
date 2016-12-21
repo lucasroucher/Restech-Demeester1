@@ -4,13 +4,15 @@ export default function saveNewStudy() {
       type: 'SAVING_NEW_STUDY',
     });
 
-    dispatch({
-      type: 'NEW_STUDY_SAVED',
-    });
+    setTimeout(() => {
+      dispatch({
+        type: 'NEW_STUDY_SAVED',
+      });
 
-    dispatch({
-      type: 'HIDE_NEW_MODAL',
-    });
+      dispatch({
+        type: 'HIDE_NEW_MODAL',
+      });
+    }, 2000);
 
     // dispatch({
     //   type: 'NEW_STUDY_SAVE_FAILED'

@@ -15,7 +15,7 @@ class NewModal extends Component {
         <Modal.Body>
           <Tabs id="newStudyTabs" defaultActiveKey="patientDetails">
             <Tab title="Patient Details" eventKey="patientDetails">
-              <PatientDetails />
+              <PatientDetails disabled={this.props.saving} />
             </Tab>
             <Tab title="Custom Symptoms" eventKey="customSymptoms"></Tab>
             <Tab title="Study Details" eventKey="studyDetails" disabled></Tab>
@@ -23,11 +23,15 @@ class NewModal extends Component {
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.hideNewModal}>Cancel</Button>
-          <Button onClick={this.props.saveNewStudy} bsStyle="primary">Save</Button>
+          <Button onClick={this.props.saveNewStudy} bsStyle="primary" disabled={this.props.saving}>Save</Button>
         </Modal.Footer>
       </Modal>
     );
   }
 }
 
-export default connect(null, { hideNewModal, saveNewStudy })(NewModal);
+function mapStateToProps(state) {
+  return { saving: state.newStudy.saving };
+}
+
+export default connect(mapStateToProps, { hideNewModal, saveNewStudy })(NewModal);

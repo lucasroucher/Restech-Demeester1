@@ -9,9 +9,7 @@ class App extends Component {
     return (
       <div>
         <MenuBar onSelect={this.handleSelect} />
-        <NewStudyModal show={this.props.newModalShowing}
-          onSave={this.handleSave}
-          onClose={this.handleClose} />
+        <NewStudyModal show={this.props.newStudy.show} />
         <p>content will go here</p>
       </div>
     );
@@ -20,24 +18,14 @@ class App extends Component {
   handleSelect = (eventKey, event) => {
     switch (eventKey) {
       case 'new':
-        // return this.setState({ showNewModal: true });
         return this.props.showNewModal();
       default:
     }
   }
-
-  handleSave = () => {
-    console.log('save');
-    this.handleClose();
-  }
-
-  handleClose = () => {
-    this.setState({ showNewModal: false });
-  }
 }
 
 function mapStateToProps(state) {
-  return { newModalShowing: state.newModalShowing };
+  return { newStudy: state.newStudy };
 }
 
 const mapDispatchToProps = { showNewModal };

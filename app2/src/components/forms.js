@@ -23,7 +23,7 @@ export function SelectField({ id, label, options, help, ...props }) {
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
-      <FormControl componentClass="select">
+      <FormControl componentClass="select" {...props}>
         {options.map(option => (<option key={option.value} value={option.value}>{option.label}</option>))}
       </FormControl>
       {help && <HelpBlock>{help}</HelpBlock>}
@@ -41,18 +41,19 @@ export class UnitField extends Component {
   }
 
   render() {
-    const { id, label, units, help } = this.props;
+    const { id, label, units, help, ...props } = this.props;
 
     return (
       <FormGroup controlId={id}>
         <ControlLabel>{label}</ControlLabel>
         <InputGroup>
-          <FormControl type="text" />
+          <FormControl type="text" {...props} />
           <DropdownButton
             id={id + "-dropdown-addon"}
             componentClass={InputGroup.Button}
             title={this.state.current}
             onSelect={newUnit => this.setState({ current: newUnit })}
+            disabled={props.disabled}
           >
             {units.map(unit => (
               <MenuItem key={unit.value} eventKey={unit.value} active={this.state.current === unit.value}>{unit.label}</MenuItem>
