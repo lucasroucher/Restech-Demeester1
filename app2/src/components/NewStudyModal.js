@@ -23,7 +23,7 @@ class NewModal extends Component {
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.hideNewModal}>Cancel</Button>
-          <Button onClick={this.props.hideNewModal} bsStyle="primary">Save</Button>
+          <Button onClick={this.props.saveNewStudy} bsStyle="primary">Save</Button>
         </Modal.Footer>
       </Modal>
     );

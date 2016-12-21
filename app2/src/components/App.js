@@ -8,16 +8,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MenuBar onSelect={this.select.bind(this)} />
+        <MenuBar onSelect={this.handleSelect} />
         <NewStudyModal show={this.props.newModalShowing}
-          onSave={this.saveNewStudy.bind(this)}
-          onClose={this.closeNewModal.bind(this)} />
+          onSave={this.handleSave}
+          onClose={this.handleClose} />
         <p>content will go here</p>
       </div>
     );
   }
 
-  select(eventKey, event) {
+  handleSelect = (eventKey, event) => {
     switch (eventKey) {
       case 'new':
         // return this.setState({ showNewModal: true });
@@ -26,12 +26,12 @@ class App extends Component {
     }
   }
 
-  saveNewStudy() {
+  handleSave = () => {
     console.log('save');
-    this.closeNewModal();
+    this.handleClose();
   }
 
-  closeNewModal() {
+  handleClose = () => {
     this.setState({ showNewModal: false });
   }
 }
