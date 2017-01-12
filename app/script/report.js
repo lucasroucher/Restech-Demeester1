@@ -185,9 +185,9 @@ function updateReport(study) {
     function addCountsUnder(what, events) {
         $('td.sym-cor-cough-' + what).text(countCorrelatedEvents(study, 1, events));
         $('td.sym-cor-heart-' + what).text(countCorrelatedEvents(study, 3, events));
-        $('td.sym-cor-custom1-' + what).text(countCorrelatedEvents(study, 5, events));
+        $('td.sym-cor-custom1-' + what).text(countCorrelatedEvents(study, 7, events));
         $('td.sym-cor-custom2-' + what).text(countCorrelatedEvents(study, 6, events));
-        $('td.sym-cor-custom3-' + what).text(countCorrelatedEvents(study, 7, events));
+        $('td.sym-cor-custom3-' + what).text(countCorrelatedEvents(study, 5, events));
     }
 
     $('td.sym-tot-cough').text(study.coughPeriods.length);
