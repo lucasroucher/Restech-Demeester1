@@ -94,8 +94,7 @@ function normalizeData(study) {
     discoverPeriods(study);
 
     study.totalSupineTime = _.reduce(study.data, function(sum, d) { return sum + (d.supine ? 1 : 0); }, 0) * 500;
-	console.log("************ Made it to what should be the end ****************")
-    return results;
+	  return results;
 }
 
 function pH(value, gain, offset) {

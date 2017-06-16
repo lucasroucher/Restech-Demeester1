@@ -92,17 +92,27 @@ var MEAL_BUFFER_COUNT = MEAL_BUFFER_TIME_IN_MS / TIME_PER_DATUM_IN_MS;
 
 function getDataWithoutMeals2(study) {
     var newData = [];
-
+    console.log("Meal Buffer Count is :" + MEAL_BUFFER_COUNT);
     for (var i = 0, n = study.data.length; i < n; i++) {
         var datum = study.data[i];
 
         if (datum.meal) {
+            console.log("Made it in the datum.meal");
             // Need to add a non event value to the datum to end a possible event scenario
-            newData[newData.length - MEAL_BUFFER_COUNT-1].val = null;
+
+            if(i>MEAL_BUFFER_COUNT && study.data[i-MEAL_BUFFER_COUNT].val !== null) {
+                console.log("Value = " + study.data[i-MEAL_BUFFER_COUNT].val);
+                console.log("This is the iteration of the study with meal :: " + i);
+                newData[newData.length - MEAL_BUFFER_COUNT-1].val = null;
+
             //console.log("Value in newData After buff " + newData[newData.length -MEAL_BUFFER_COUNT-1].val);
             //newData[i-MEAL_BUFFER_COUNT].datum.val=7.5;
             // Remove data before meal.
-            newData = newData.slice(0, -MEAL_BUFFER_COUNT);
+            // Need to add a case to combat the situation of the study not having 5 minutes to chop off at the start of the study if meal exists
+
+
+                newData = newData.slice(0, -MEAL_BUFFER_COUNT);
+              }
 
             // Skip meal.
             for (; i < n; i++) {
