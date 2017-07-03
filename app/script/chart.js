@@ -60,7 +60,7 @@ function chartData(study, options) {
             var x = d3.time.scale();
             x.domain(options.xDomain || d3.extent(data, function(d) { return d.when; }));
             x.range([ 0, width ]);
-            x.nice();
+            //x.nice();
             return x;
         }
 

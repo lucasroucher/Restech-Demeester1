@@ -2,9 +2,9 @@ function normalizeData(study) {
     var offset = study.offset;
     var gain = study.gain;
     var data = study.data;
-	var TwentyFourHoursInMillis = 24 * 60 * 60 * 1000;
-	var fiveMinutesInMillis = 5 * 60 * 1000;
-	var validDateWindow = 60 * 60 * 60 * 1000; // hours * mins * secs * ms
+    var TwentyFourHoursInMillis = 24 * 60 * 60 * 1000;
+    var fiveMinutesInMillis = 5 * 60 * 1000;
+    var validDateWindow = 60 * 60 * 60 * 1000; // hours * mins * secs * ms
     var results = [];
 
     if (!data.length) {
@@ -14,7 +14,7 @@ function normalizeData(study) {
 
     var skipped = 0;
     var badPH = 0;
-	var firstWhen = data[0].when;
+    var firstWhen = data[0].when;
     // If the dates are the same, sort by line number, else sort by the dates.
     //data.sort(function(a, b) { return a.when === b.when ? a.lineNumber - b.lineNumber : a.when - b.when; });
 
@@ -52,7 +52,7 @@ function normalizeData(study) {
 	var currentpHOffset = 0;
 
     $.each(data, function(i, d) {
-        if (d.val > 1400) {
+        if (d.val > 1400 || d.val < 150) {
             skipped++;
         } else {
             d.val = pH(d.val, gain, offset);
@@ -62,7 +62,7 @@ function normalizeData(study) {
 			   d.val = d.val + currentpHOffset;
 			}
 
-            if (d.val < 1 || d.val > 16) {
+            if (d.val < 1 || d.val > 14) {
                 badPH++;
 
                 if (i > 0) {

@@ -9,6 +9,8 @@ function updateReport(study) {
     if (!study) return;
 
     if (!study.data) return;
+    //$('#rechartData')(study);
+    //console.log("Did this do anything -- " + YDOMAIN);
 
     chartData(study, {
         container: '#reportChart',
@@ -17,6 +19,8 @@ function updateReport(study) {
         xTickFormat: '%H:%M',
         yDomain: YDOMAIN
     });
+
+    //console.log("Y is now -- " + YDOMAIN);
 
     var now = new Date();
     $('.auto-date').text(now.toLocaleDateString());

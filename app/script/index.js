@@ -23,7 +23,7 @@ $(function() {
         // console.log("This is after I select a file from open?????");
         //essentially want cmd undoables.length=0
         cmds.clearUndoables();
-        console.log(study);
+        //console.log(study);
 
         $('button[data-cmd="flagDelMeals"]').text(Globalize.formatMessage('chart/deleteMeals'));
 
@@ -53,6 +53,9 @@ $(function() {
         $('.study-armeds').text(study.armeds);
 
         chartData(study);
+        //console.log("About to change something here ***" + YDOMAIN);
+        YDOMAIN = [ 4.0, 8.5 ];
+        //console.log("About to change something here ***" + YDOMAIN);
 
 
         $('#chart').removeClass('hide');

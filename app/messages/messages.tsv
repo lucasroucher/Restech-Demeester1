@@ -1,151 +1,151 @@
-key	en	de	pl
-noData/title	Sorry	Entschuldigung!	Przepraszamy
-noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefunden wurde.	Nie odnaleziono pliku danych pacjenta PatientData.txt
-fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.	Wy?wietlanie {displayCount} z {archiveCount} plik�w w archiwum.
-menu/new	New	Neu	Nowy
-menu/retrieve/text	Retrieve	Aufzeichnung	Odczytaj
-menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung Studie	Odczytaj badanie z karty
-menu/open/text	Open	Oeffnen	Otwórz
-menu/open/tooltip	Open Study	Studie Oeffnen	Otwórz badanie
-menu/printPrev	Print	Druckvorschau	Drukuj
-menu/report	Report	Bericht	Raport
-menu/graph	Graph	Schaubild	Wykres
-menu/save/text	Save	Speichern	Zapisz
-menu/save/tooltip	Save study to disk	Speichern Studie	Zapisz badanie na dysk
-settings/settings	Settings	Einstellungen	Ustawienia
-settings/help	Help	Hilfe	Pomoc
-newStudy/title	New Study	Neue Aufzeichnung	Nowe badanie
-newStudy/tabs/patientDetails/title	Patient Details	Patienten Details	Dane pacjenta
-newStudy/tabs/patientDetails/lastName	Last Name	Nachname	Nazwisko
-newStudy/tabs/patientDetails/firstName	First Name	Vorname	Imię
-newStudy/tabs/patientDetails/studyDate	Study Date	Aufzeichnungsdatum	Data badania
-newStudy/tabs/patientDetails/patientID	Patient ID	Patienten ID	Id pacjenta
-newStudy/tabs/patientDetails/birthdate	Birthdate	Geburtstag	Data urodzenia
-newStudy/tabs/patientDetails/gender/title	Gender	Geschlecht	P?e?
-newStudy/tabs/patientDetails/gender/male	Male	maennlich	M??czyzna
-newStudy/tabs/patientDetails/gender/female	Female	weiblich	Kobieta
-newStudy/tabs/patientDetails/weight	Weight	Gewicht	Masa
-newStudy/tabs/patientDetails/height	Height	Groesse	Wzrost
-newStudy/tabs/patientDetails/requiredField	required field	Pflicht-Feld	pole wymagane
-newStudy/tabs/customSymptoms/title	Custom Symptoms	Patientenspezifische Symptome	Objawy specjalne (użytkownika)
-newStudy/tabs/customSymptoms/symptom1	Symptom 1	Symptome 1	Objaw 1
-newStudy/tabs/customSymptoms/symptom2	Symptom 2	Symptome 2	Objaw 2
-newStudy/tabs/customSymptoms/symptom3	Symptom 3	Symptome 3	Objaw 3
-newStudy/tabs/studyDetails/title	Study Details	Studiendetails	Dane badania
-newStudy/tabs/studyDetails/technician	Technician	Aerztliche Hilfskraft	Technik
-newStudy/tabs/studyDetails/physician	Physician	Arzt	Lekarz
-newStudy/tabs/studyDetails/refPhysician	Ref Physician	Ueberweisender Arzt	Lekarz kieruj?cy
-newStudy/tabs/studyDetails/studyType	Study Type	Aufzeichnungstyp	Typ badania
-newStudy/tabs/studyDetails/indication	Indication	Indikation	Wskazanie
-newStudy/tabs/studyDetails/antirefluxMed	Antireflux Med.	Antireflux Med.	Lek przeciwrefluksowy
-newStudy/tabs/cancel	Cancel	Abbrechen	Anuluj
-newStudy/tabs/save	Save	Speichern	Zapisz
-retrieveStudy/title	Retrieve Study	abrufen Studie	Odzyskaj badanie
-retrieveStudy/selectFile	Select File	Datei aussuchen	Wybierz plik
-retrieveStudy/change	Change	�ndern	Zmie?
-retrieveStudy/remove	Remove	beseitigen	Usu?
-retrieveStudy/loading	Loading	die Beladung	?adowanie
-openStudy/title	Title	Titel	Tytu?
-openStudy/selectFile	Select File	Datei aussuchen	Wybierz plik
-openStudy/change	Change	�ndern	Zmie?
-openStudy/remove	Remove	beseitigen	Usu?
-openStudy/browse	Browse	Browse	Przegl?daj
-openStudy/loading	Loading	die Beladung	?adowanie
-chart/title	Patient Name	Patientenname	Nazwa pacjenta
-chart/meal	Meal	Mahlzeit	Posi?ek
-chart/mealShort	Meal	Essen	Posi?ek
-chart/supine	Supine	Rueckenlage	Pozycja le??ca na plecach
-chart/supineShort	Supine	R�cken	Pozycja le??ca na plecach
-chart/cough	Cough	Husten	Kaszel
-chart/heartburn	Heartburn	Sodbrennen	Zgaga
-chart/custom	Custom	Benutzerdefiniert	Ustawienie u?ytkownika
-chart/deleteMeals	Delete Meals	Essen loeschen	Usu? posi?ki
-chart/undeleteMeals	Undelete Meals	Essen loeschung	Przywr�? posi?ki
-chart/heartburnShort	HB	HB	HB
-chart/all	 All	 Alle	Wszystko
-chart/dropdownAdd/tooltip	Add period to pH data in a range	Hinzuf�ge in markierter Positionen	Dodaj okres do danych pH w zakresie
-chart/dropdownClear/tooltip	Clear periods from pH data in a range	Entfernen in markierter Positionen	Wyczy?? okres z danych pH w zakresie
-chart/del/tooltip	Delete pH data and periods in a range	L�schen der markierten Positionen	Wyczy?c dane pH i okresy w zakresie
-chart/undo/tooltip	Undo the last undoable command	Letzte Eingabe r�ckg�ngig machen	Cofnij ostatni? niewykonaln? czynno??
-chart/zoomIn/tooltip	Zoom in on pH data in selected range	Zoom des markierten Bereichs	Przybli? dane pH w wybranym zakresie
-chart/zoomOut/tooltip	Zoom out	Zoom aus	Przybli?
-chart/adjustScale/tooltip	Adjust pH scale	pH Skala anpassen	Ustaw skal? pH
-reportPage/indication	Indication	Hinweis	Wskazanie
-reportPage/antirefluxMed	Antireflux Med	Antireflux Med.	Lek przeciwrefluksowy
-reportPage/studyDuration	Study Duration	Studiendauer	Czas trwania badania
-reportPage/mealsRemoved	Meals Removed From Calculations	Mahlzeiten aus der Berechnung entfernt	Posi?ki usuni?te z oblicze?
-reportPage/lastName	Last Name	Nachname	Nazwisko
-reportPage/firstName	First Name	Vorname	Imi?
-reportPage/studyDate	Study Date	Aufzeichnungsdatum	Data badania
-reportPage/patientID	Patient #	Patienten ID	Nr pacjenta
-reportPage/dob	D.O.B	Geburtstag	Data urodzenia
-reportPage/investigator	Investigator	Ermittler	Badacz
-reportPage/referredBy	Referred By	Bezeichnet Durch	Skierowany przez
-reportPage/technician	Technician	Aerztliche Hilfskraft	Technik/Operator
-reportPage/eventCalculations	EVENT CALCULATIONS	Ereignis Berechnungen	OBLICZENIA ZDARZENIA
-reportPage/totalTimeOfAllpHEvents	Total time of all pH events	Gesamtzeit aller pH Ereignisse	Ca?kowity czas wszystkich zdarze? pH
-reportPage/totalPercentpHBelowBaseline	Total % pH below baseline	Gesamt % pH unter Grenzwert pH	Ca?kowity % pH poni?ej linii bazowej
-reportPage/totalTimepHBelowBaselineUpright	Total time below baseline pH, upright	Gesamtzeit unter pH Grenzwert, aufrecht	Ca?kowity czas poni?ej warto?ci bazowej pH, pozycja stoj?ca
-reportPage/totalPercentpHBelowBaselineUpright	Total % pH below baseline, upright	Gesamt % pH unter Grenzwert, aufrecht	Ca?kowity % pH poni?ej warto?ci bazowej, pozycja stoj?ca
-reportPage/totalTimepHBelowBaselineSupine	Total time below baseline pH, supine	Gesamtzeit unter Grenzwert pH, liegend	Ca?kowity czas poni?ej warto?ci bazowej pH, pozycja le??ca na plecach
-reportPage/totalPercentpHBelowBaselineSupine	Total % pH below baseline, supine	Gesamt % unter Grenzwert pH, liegend	Ca?kowity % pH poni?ej warto?ci bazowej, pozycja le??ca na plecach
-reportPage/longestTimeEvent	Longest time of a pH Event	Laengste Dauer eines pH Ereignisses	Najd?u?szy czas zdarzenia pH
-reportPage/numberEventsGreaterThan5Minutes	Number of events > 5 minutes	Anzahl an Ereignissen > 5 Minuten	Liczba zdarze? > 5 minut
-reportPage/totalNumberOfEvents	Total Number of Events	Gesamtanzahl  der Ereignisse	Ca?kowita liczba zdarze?
-reportPage/symptomCorrelation	SYMPTOM CORRELATION	Symptom Korrelation	KORELACJA OBJAWU
-reportPage/total	TOTAL	GESAMT	SUMA
-reportPage/cough	Cough	Husten	Kaszel
-reportPage/heartburn	Heartburn	Sodbrennen	Zgaga
-reportPage/patientsValue	Patients Value	Patienten Wert	Warto?? pacjent�w
-reportPage/normalValue	Normal Value	Normaler Wert	Warto?? normalna
-reportPage/signature	Signature:	Unterschrift:	Podpis:
-reportPage/notes	Notes	Notizen	Uwagi
-settingsPage/title	Settings	Einstellungen	Ustawienia
-settingsPage/tabs/general/title	General	Allgemein	Ustawienia og�lne
-settingsPage/tabs/general/logo	Logo	Logo	Logo
-settingsPage/tabs/general/selectFile	Select File	Datei aussuchen	Wybierz plik
-settingsPage/tabs/general/change	Change	�ndern	Zmie?
-settingsPage/tabs/general/remove	Remove	beseitigen	Usu?
-settingsPage/tabs/general/name	Name	Name	Nazwa
-settingsPage/tabs/general/address	Address	Adresse	Adres
-settingsPage/tabs/general/city	City	Stadt	Miejscowo??
-settingsPage/tabs/general/state	State	Bundesland	Wojew�dztwo
-settingsPage/tabs/general/zip	Zip	Postleitzahl	Kod pocztowy
-settingsPage/tabs/general/phone	Phone	Telefon	Telefon
-settingsPage/tabs/acidNormals/title	Acid Normals	Saurer Normals	Warto?ci normalne kwasowo?ci
-settingsPage/tabs/acidNormals/upright95	Upright95	Aufrecht95	Pozycja stoj?ca95
-settingsPage/tabs/acidNormals/supine95	Supine95	Ruecken95	Pozycja le??ca na plecach95
-settingsPage/tabs/acidNormals/upright75	Upright75	Aufrecht75	Pozycja stoj?ca75
-settingsPage/tabs/acidNormals/supine75	Supine75	Ruecken75	Pozycja le??ca na plecach75
-settingsPage/tabs/colors/title	Colors	Farben	Kolory
-settingsPage/tabs/colors/loadDefault	Load Default Colors	Load Default Farben	Za?aduj kolory domy?lne
-settingsPage/tabs/colors/normal	Normal	Normal	Normalny
-settingsPage/tabs/colors/mild	Mild	Mild	?agodny
-settingsPage/tabs/colors/moderate	Moderate	m��ig	Umiarkowany
-settingsPage/tabs/colors/severe	Severe	ernst	Ci??ki
-settingsPage/tabs/colors/meal	Meal	Mahlzeit	Posi?ek
-settingsPage/tabs/colors/supine	Supine	Rueckenlage	Pozycja stoj?ca
-settingsPage/tabs/colors/cough	Cough	Husten	Kaszel
-settingsPage/tabs/colors/heartburn	Heartburn	Sodbrennen	Zgaga
-settingsPage/tabs/colors/symptom1	Symptom1	Symptome1	Objaw1
-settingsPage/tabs/colors/symptom2	Symptom2	Symptome2	Objaw2
-settingsPage/tabs/colors/symptom3	Symptom3	Symptome3	Objaw3
-settingsPage/tabs/eventSettings/title	Event Settings	Ereigniseinstellungen	Ustawienia zdarzenia
-settingsPage/tabs/eventSettings/minEventTime	Min Event Time	Mindestereigniszeit	Minimalny czas zdarzenia
-settingsPage/tabs/eventSettings/endEventThreshold	End Event Threshold	Ende Ereignis Schwelle	Pr�g zdarzenia ko?cowego
-settingsPage/tabs/pathToData/title	Path To Data	Weg zur Daten	?cie?ka do danych
-settingsPage/tabs/pathToData/dirForDataFiles	Directory For Data Files	Verzeichnis f�r Datendateien	Katalog plik�w danych
-settingsPage/tabs/cancel	Cancel	Abbrechen	Anuluj
-settingsPage/tabs/save	Save	Speichern	Zapisz
-settingsPage/helpModal/about	About	�ber	Informacje
-settingsPage/helpModal/licenseAgreement	License Agreement	Lizenzvereinbarung	Umowa licencyjna
-settingsPage/helpModal/userGuide	User Guide	Benutzerhandbuch	Przewodnik u?ytkownika
-settingsPage/helpModal/demeesterRyanScore	DeMeester Ryan Score	DeMeester Ryan Score	Wynik w skali DeMeester Ryan
-settingsPage/helpModal/normativeDataChart	Normative Data Chart	Normative Daten Chart	Tablica danych normatywnych
-retrievingModal/title	Please wait	Warten Sie mal	Prosz? czeka?
-retrievingModal/retrieving	Retrieving...	Abrufen...	Odzyskiwanie�
-savingModal/title	Please wait	Warten Sie mal	Prosz? czeka?
-aboutModal/title	About	�ber	Informacje
-aboutModal/message	This Product is licensed for use on a single site basis. Copying or redistributing this software is prohibited	Dieses Produkt ist f�r den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten	Ten produkt posiada licencj? jednostanowiskow?. Kopiowanie i dystrybucja tego programu jest zakazana.
-aboutModal/version	Software Version	Softwareversion
-userGuideModal/title	User Guide	Benutzerhandbuch
+key	en	de	pl	fr	nl
+noData/title	Sorry	Entschuldigung!	Przepraszamy	Désolé!	Sorry
+noData/text	No PatientData.txt file was found.	Keine PatientData.txt Datei gefunden wurde.	Nie odnaleziono pliku danych pacjenta PatientData.txt	Pas de fichier patient data.txt trouvé	geen patiënt data.txt document gevonden
+fileCountMessage	Displaying {displayCount} out of {archiveCount} files in the archive.	Es werden {displayCount} von {archiveCount} Dateien im Archiv.	Wyświetlanie {displayCount} z {archiveCount} plików w archiwum.	Affichage {displayCount} de fichiers {archiveCount} dans les archives.	Er worden {displayCount} van {archiveCount} documenten in archief weergegeven
+menu/new	New	Neu	Nowy	Nouveau	nieuw
+menu/retrieve/text	Retrieve	Aufzeichnung	Odczytaj  	Récupérer	ophalen
+menu/retrieve/tooltip	Retrieve study from data card	Aufzeichnung Studie	Odczytaj badanie z karty	Récupérer l'enregistrement de la carte de données	Studie ophalen van data kaart
+menu/open/text	Open	Oeffnen	Otwórz	Ouvrir	open
+menu/open/tooltip	Open Study	Studie Oeffnen	Otwórz badanie	Ouvrir l'enregistrement	Open studie
+menu/printPrev	Print	Druckvorschau	Drukuj	Aperçu avant impression	Print voorbeeld
+menu/report	Report	Bericht	Raport	Rapport	Rapport
+menu/graph	Graph	Schaubild	Wykres	Graphique 	Grafiek
+menu/save/text	Save	Speichern	Zapisz	Sauver	Bewaren
+menu/save/tooltip	Save study to disk	Speichern Studie	Zapisz badanie na dysk	Sauver l'enregistrement sur disque	Studie bewaren op schijf
+settings/settings	Settings	Einstellungen	Ustawienia	Réglages	Instelingen
+settings/help	Help	Hilfe	Pomoc	Aide	Help
+newStudy/title	New Study	Neue Aufzeichnung	Nowe badanie	Nouvel examen	Nieuwe studie
+newStudy/tabs/patientDetails/title	Patient Details	Patienten Details	Dane pacjenta	Informations patient	Patiënten gegevens
+newStudy/tabs/patientDetails/lastName	Last Name	Nachname	Nazwisko	Nom	Achternaam
+newStudy/tabs/patientDetails/firstName	First Name	Vorname	Imię	Prénom	Voornaam
+newStudy/tabs/patientDetails/studyDate	Study Date	Aufzeichnungsdatum	Data badania	Date de l'examen	Studie datum
+newStudy/tabs/patientDetails/patientID	Patient ID	Patienten ID	Id pacjenta	Numéro patient	Patiënt ID
+newStudy/tabs/patientDetails/birthdate	Birthdate	Geburtstag	Data urodzenia	Date de naisance	Geboortedatum
+newStudy/tabs/patientDetails/gender/title	Gender	Geschlecht	Płeć	Sexe	Geslacht
+newStudy/tabs/patientDetails/gender/male	Male	maennlich	Mężczyzna	Masculin	Man
+newStudy/tabs/patientDetails/gender/female	Female	weiblich	Kobieta	Féminin	Vrouw
+newStudy/tabs/patientDetails/weight	Weight	Gewicht	Masa	Poids	Gewicht
+newStudy/tabs/patientDetails/height	Height	Groesse	Wzrost	Taille	lLengte
+newStudy/tabs/patientDetails/requiredField	required field	Pflicht-Feld	pole wymagane	Champ obligatoire	Verplicht veld
+newStudy/tabs/customSymptoms/title	Custom Symptoms	Patientenspezifische Symptome	Objawy specjalne (użytkownika)	Symptômes personnalisés	Patiënten symptomen
+newStudy/tabs/customSymptoms/symptom1	Symptom 1	Symptome 1	Objaw 1	Symptôme 1	Symptoom 1
+newStudy/tabs/customSymptoms/symptom2	Symptom 2	Symptome 2	Objaw 2	Symptôme 2	Symptoom 2
+newStudy/tabs/customSymptoms/symptom3	Symptom 3	Symptome 3	Objaw 3	Symptôme 3	Symptoom 3
+newStudy/tabs/studyDetails/title	Study Details	Studiendetails	Dane badania	Informations examen	Studie details
+newStudy/tabs/studyDetails/technician	Technician	Aerztliche Hilfskraft	Technik	Technicien	Technicus
+newStudy/tabs/studyDetails/physician	Physician	Arzt	Lekarz	Médecin	Arts
+newStudy/tabs/studyDetails/refPhysician	Ref Physician	Ueberweisender Arzt	Lekarz kierujący	Médecin généraliste	verwijzende arts
+newStudy/tabs/studyDetails/studyType	Study Type	Aufzeichnungstyp	Typ badania	Type d'examen	studie type
+newStudy/tabs/studyDetails/indication	Indication	Indikation	Wskazanie	Indication	indicatie
+newStudy/tabs/studyDetails/antirefluxMed	Antireflux Med.	Antireflux Med.	Lek przeciwrefluksowy	Med. Antireflux	antireflux medicatie
+newStudy/tabs/cancel	Cancel	Abbrechen	Anuluj	Annuler	afbreken
+newStudy/tabs/save	Save	Speichern	Zapisz	Sauver	bewaren
+retrieveStudy/title	Retrieve Study	abrufen Studie	Odzyskaj badanie	Récupérer un enregistrement	studie ophalen
+retrieveStudy/selectFile	Select File	Datei aussuchen	Wybierz plik	Sélectionner ficher	selecteer file
+retrieveStudy/change	Change	ändern	Zmień	Modifier	veranderen
+retrieveStudy/remove	Remove	beseitigen	Usuń	Supprimer	verwijderen
+retrieveStudy/loading	Loading	die Beladung	Ładowanie	Chargement	laden
+openStudy/title	Open Study	Studie Oeffnen	Otwórz badanie	Ouvrir l'enregistrement	Open studie
+openStudy/selectFile	Select File	Datei aussuchen	Wybierz plik	Sélectionner fichier	selecteer file
+openStudy/change	Change	ändern	Zmień	Modifier	veranderen
+openStudy/remove	Remove	beseitigen	Usuń	Supprimer	verwijderen
+openStudy/browse	Browse	Browse	Przeglądaj	Parcourir	zoeken
+openStudy/loading	Loading	die Beladung	Ładowanie	Chargement	laden
+chart/title	Patient Name	Patientenname	Nazwa pacjenta	Nom du patient	patiënt naam
+chart/meal	Meal	Mahlzeit	Posiłek	Repas	maaltijd
+chart/mealShort	Meal	Essen	Posiłek	Repas	eten
+chart/supine	Supine	Rueckenlage	Pozycja leżąca na plecach	Couché	rugligging
+chart/supineShort	Supine	Rücken	Pozycja leżąca na plecach	Couché	rugligging
+chart/cough	Cough	Husten	Kaszel	Toux	Hoesten
+chart/heartburn	Heartburn	Sodbrennen	Zgaga	Brûlure d'estomac	brandend maagzuur
+chart/custom	Custom	Benutzerdefiniert	Ustawienie użytkownika	Personnalisation	Gewoonte
+chart/deleteMeals	Delete Meals	Essen loeschen	Usuń posiłki	Effacer repas	maaltijden verwijderen
+chart/undeleteMeals	Undelete Meals	Essen loeschung	Przywróć posiłki	Remettre repas	Maaltijden niet verwijderen
+chart/heartburnShort	HB	HB	HB	HB	HB
+chart/all	 All	 Alle	Wszystko	Tout	alle
+chart/dropdownAdd/tooltip	Add period to pH data in a range	Hinzufüge in markierter Positionen	Dodaj okres do danych pH w zakresie	Ajouter une période aux données pH dans une plage	Toevoegen periode PH data in het bereik
+chart/dropdownClear/tooltip	Clear periods from pH data in a range	Entfernen in markierter Positionen	Wyczyść okres z danych pH w zakresie	Effacer des périodes des données pH dans une plage	Leeg maken van PH data in het bereik
+chart/del/tooltip	Delete pH data and periods in a range	Löschen der markierten Positionen	Wyczyść dane pH i okresy w zakresie	Supprimer des périodes des données pH dans une plage	Verwijder PH data and periode in het bereik
+chart/undo/tooltip	Undo the last undoable command	Letzte Eingabe rückgängig machen	Cofnij ostatnią czynność	Annuler la dernière commande	De laatste opdracht wijzigen
+chart/zoomIn/tooltip	Zoom in on pH data in selected range	Zoom des markierten Bereichs	Przybliż dane pH w wybranym zakresie	Agrandir les données pH dans la section sélectionnée	Inzoemen op de PH data in het geselecteerde bereik
+chart/zoomOut/tooltip	Zoom out	Zoom aus	Oddal	Dézoomer	Uitzoomen
+chart/adjustScale/tooltip	Adjust pH scale	pH Skala anpassen	Ustaw skalę pH	Ajuster l'échelle pH	Aanpassen van de PH waarde
+reportPage/indication	Indication	Hinweis	Wskazanie	Indication	indicatie
+reportPage/antirefluxMed	Antireflux Med	Antireflux Med.	Lek przeciwrefluksowy	Med. antireflux	antireflux medicatie
+reportPage/studyDuration	Study Duration	Studiendauer	Czas trwania badania	Durée de l'examen	studie duur
+reportPage/mealsRemoved	Meals Removed From Calculations	Mahlzeiten aus der Berechnung entfernt	Posiłki usunięte z obliczeń	Repas supprimés du calcul	maaltijden verwijdert van berekeningen
+reportPage/lastName	Last Name	Nachname	Nazwisko	Nom	achternaam
+reportPage/firstName	First Name	Vorname	Imię	Prénom	voornaam
+reportPage/studyDate	Study Date	Aufzeichnungsdatum	Data badania	Date de l'examen	studie datum
+reportPage/patientID	Patient #	Patienten ID	Nr pacjenta	Numéro patient	patiënt ID
+reportPage/dob	D.O.B	Geburtstag	Data urodzenia	Date de naiss.	geboortedatum
+reportPage/investigator	Investigator	Ermittler	Badacz	Examinateur	onderzoeker
+reportPage/referredBy	Referred By	Bezeichnet Durch	Skierowany przez	Prescrit par	verwezen door:
+reportPage/technician	Technician	Aerztliche Hilfskraft	Technik/Operator	Technicien	Technicus
+reportPage/eventCalculations	EVENT CALCULATIONS	Ereignis Berechnungen	OBLICZENIA ZDARZENIA	Calcul des épisodes pH	gebeurtenis berekening
+reportPage/totalTimeOfAllpHEvents	Total time of all pH events	Gesamtzeit aller pH Ereignisse	Całkowity czas wszystkich zdarzeń pH	Durée totale des épisodes pH	totale tijd van alle pH gebeurtenissen
+reportPage/totalPercentpHBelowBaseline	Total % pH below baseline	Gesamt % pH unter Grenzwert pH	Całkowity % pH poniżej linii bazowej	% de durée totale en dessous du seuil	Totaal % pH beneden de basislijn
+reportPage/totalTimepHBelowBaselineUpright	Total time below baseline pH, upright	Gesamtzeit unter pH Grenzwert, aufrecht	Całkowity czas poniżej wartości bazowej pH, pozycja stojąca	Durée totale en dessous du seuil, debout	Totale tijd pH beneden basislijn, rechtopstaand
+reportPage/totalPercentpHBelowBaselineUpright	Total % pH below baseline, upright	Gesamt % pH unter Grenzwert, aufrecht	Całkowity % pH poniżej wartości bazowej, pozycja stojąca	% de durée totale debout, en dessous du seuil	Totaal % pH beneden de basislijn, rechtopstaand
+reportPage/totalTimepHBelowBaselineSupine	Total time below baseline pH, supine	Gesamtzeit unter Grenzwert pH, liegend	Całkowity czas poniżej wartości bazowej pH, pozycja leżąca na plecach	Durée totale en dessous du seuil, couché	Totale tijd pH beneden basislijn, liggend
+reportPage/totalPercentpHBelowBaselineSupine	Total % pH below baseline, supine	Gesamt % unter Grenzwert pH, liegend	Całkowity % pH poniżej wartości bazowej, pozycja leżąca na plecach	% de durée totale couché en dessous du seuil	Totaal % pH beneden de basislijn, liggend
+reportPage/longestTimeEvent	Longest time of a pH Event	Laengste Dauer eines pH Ereignisses	Najdłuższy czas zdarzenia pH	la plus longue durée d'épisode pH	Langste tijd van een pH gebeurtenis
+reportPage/numberEventsGreaterThan5Minutes	Number of events > 5 minutes	Anzahl an Ereignissen > 5 Minuten	Liczba zdarzeń > 5 minut	Nombre d'épisodes > 5 minutes	Aantal gebeurtenissen > 5 minuten
+reportPage/totalNumberOfEvents	Total Number of Events	Gesamtanzahl  der Ereignisse	Całkowita liczba zdarzeń	Nombre total d'épisodes	Totaal aantal gebeurtenissen
+reportPage/symptomCorrelation	SYMPTOM CORRELATION	Symptom Korrelation	KORELACJA OBJAWU	Corrélation avec symptômes	Symptoom correlatie
+reportPage/total	TOTAL	GESAMT	SUMA	Total  	Totaal
+reportPage/cough	Cough	Husten	Kaszel	Toux	Hoesten
+reportPage/heartburn	Heartburn	Sodbrennen	Zgaga	Brûlure d'estomac	brandend maagzuur
+reportPage/patientsValue	Patients Value	Patienten Wert	Wartość pacjentów	Valeur patient	Patiënten waarde
+reportPage/normalValue	Normal Value	Normaler Wert	Wartość normalna	Valeur normale	normaal waarde
+reportPage/signature	Signature:	Unterschrift:	Podpis:	Signature	Handtekening
+reportPage/notes	Notes	Notizen	Uwagi	Remarques	notitie
+settingsPage/title	Settings	Einstellungen	Ustawienia	Réglages	instellingen
+settingsPage/tabs/general/title	General	Allgemein	Ustawienia ogólne	Général	Algemeen
+settingsPage/tabs/general/logo	Logo	Logo	Logo	Logo	logo
+settingsPage/tabs/general/selectFile	Select File	Datei aussuchen	Wybierz plik	Choisir fichier	Selecteer file
+settingsPage/tabs/general/change	Change	ändern	Zmień	Modifier	veranderen
+settingsPage/tabs/general/remove	Remove	beseitigen	Usuń	Supprimer	verwijderen
+settingsPage/tabs/general/name	Name	Name	Nazwa	Nom	naam
+settingsPage/tabs/general/address	Address	Adresse	Adres	Adresse	adres
+settingsPage/tabs/general/city	City	Stadt	Miejscowość	Ville	woonplaats
+settingsPage/tabs/general/state	State	Bundesland	Województwo	Pays	provincie
+settingsPage/tabs/general/zip	Zip	Postleitzahl	Kod pocztowy	Code postal	postcode
+settingsPage/tabs/general/phone	Phone	Telefon	Telefon	Téléphone	telefoon nummer
+settingsPage/tabs/acidNormals/title	Acid Normals	Saurer Normals	Wartości normalne kwasowości	Spécifications normatives	Zuur normaal
+settingsPage/tabs/acidNormals/upright95	Upright95	Aufrecht95	Pozycja stojąca95	Debout 95	rechtopstaand95
+settingsPage/tabs/acidNormals/supine95	Supine95	Ruecken95	Pozycja leżąca na plecach95	Couché 95	liggend95
+settingsPage/tabs/acidNormals/upright75	Upright75	Aufrecht75	Pozycja stojąca75	Debout 75	rechtopstaand75
+settingsPage/tabs/acidNormals/supine75	Supine75	Ruecken75	Pozycja leżąca na plecach75	Couché 75	liggend75
+settingsPage/tabs/colors/title	Colors	Farben	Kolory	Couleurs	Kleur
+settingsPage/tabs/colors/loadDefault	Load Default Colors	Load Default Farben	Załaduj kolory domyślne	Charger couleurs par défaut	Laad standaard kleuren
+settingsPage/tabs/colors/normal	Normal	Normal	Normalny	Normal	normaal
+settingsPage/tabs/colors/mild	Mild	Mild	Łagodny	Léger	mild
+settingsPage/tabs/colors/moderate	Moderate	mäßig	Umiarkowany	Modéré	matig
+settingsPage/tabs/colors/severe	Severe	ernst	Ciężki	Sévère	ernstig
+settingsPage/tabs/colors/meal	Meal	Mahlzeit	Posiłek	Repas	maaltijden
+settingsPage/tabs/colors/supine	Supine	Rueckenlage	Pozycja stojąca	Couché	liggend
+settingsPage/tabs/colors/cough	Cough	Husten	Kaszel	Toux	hoesten
+settingsPage/tabs/colors/heartburn	Heartburn	Sodbrennen	Zgaga	Brûlure d'estomac	brandend maagzuur
+settingsPage/tabs/colors/symptom1	Symptom1	Symptome1	Objaw1	Symptôme 1	symptoom 1
+settingsPage/tabs/colors/symptom2	Symptom2	Symptome2	Objaw2	Symptôme 2	symptoom 2
+settingsPage/tabs/colors/symptom3	Symptom3	Symptome3	Objaw3	Symptôme 3	symptoom 3
+settingsPage/tabs/eventSettings/title	Event Settings	Ereigniseinstellungen	Ustawienia zdarzenia	Réglages épisodes	gebeurtenis instellingen
+settingsPage/tabs/eventSettings/minEventTime	Min Event Time	Mindestereigniszeit	Minimalny czas zdarzenia	Durée minimale d'épisode	minus gebeurtenis tijd
+settingsPage/tabs/eventSettings/endEventThreshold	End Event Threshold	Ende Ereignis Schwelle	Próg zdarzenia końcowego	Seuil fin épisode	einde gebeurtenis drempel
+settingsPage/tabs/pathToData/title	Path To Data	Weg zur Daten	Ścieżka do danych	Voie d'accès aux données	weg naar gegevens
+settingsPage/tabs/pathToData/dirForDataFiles	Directory For Data Files	Verzeichnis für Datendateien	Katalog plików danych	Dossier pour fichiers de données	Directory voor data bestanden
+settingsPage/tabs/cancel	Cancel	Abbrechen	Anuluj	Annuler	Afbreken
+settingsPage/tabs/save	Save	Speichern	Zapisz	Sauver	Bewaren
+settingsPage/helpModal/about	About	über	Informacje	A propos	Over
+settingsPage/helpModal/licenseAgreement	License Agreement	Lizenzvereinbarung	Umowa licencyjna	Contrat de licence	Licentie overeenkomst
+settingsPage/helpModal/userGuide	User Guide	Benutzerhandbuch	Przewodnik użytkownika	Manuel d'utilisation	Gebruiksaanwijzing
+settingsPage/helpModal/demeesterRyanScore	DeMeester Ryan Score	DeMeester Ryan Score	Wynik w skali DeMeester Ryan	Score De Meester Ryan	DeMeester Ryan Score
+settingsPage/helpModal/normativeDataChart	Normative Data Chart	Normative Daten Chart	Tablica danych normatywnych	Diagramme de données normatives	normatief gegevens grafiek
+retrievingModal/title	Please wait	Warten Sie mal	Proszę czekać	Patientez	Even geduld
+retrievingModal/retrieving	Retrieving...	Abrufen...	Odzyskiwanie…	Chargement	Verkrijgen…
+savingModal/title	Please wait	Warten Sie mal	Proszę czekać	Patientez	Even geduld
+aboutModal/title	About	über	Informacje	A propos	Over
+aboutModal/message	This Product is licensed for use on a single site basis. Copying or redistributing this software is prohibited	Dieses Produkt ist für den Einsatz auf einer einzigen Seite lizenziert . Das Kopieren oder diese Software umzuverteilen , ist verboten	Ten produkt posiada licencję jednostanowiskową. Kopiowanie i dystrybucja tego programu jest zakazana.	Ce Produit fait l'objet d'une licence pour l'utilisation sur un seul site. La reproduction ou la redistribution de ce logiciel sont interdits	Dit product heeft een enkele locatie licentie. Kopiëren of herverdelen van deze software is verboden
+aboutModal/version	Software Version	Softwareversion	Wersja oprogramowania	Version du logiciel	Software versie
+userGuideModal/title	User Guide	Benutzerhandbuch	Przewodnik użytkownika	Manuel d'utilisation	Gebruiksaanwijzing
