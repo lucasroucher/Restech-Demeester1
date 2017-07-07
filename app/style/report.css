@@ -24,15 +24,15 @@
 #report-bot-section > .right {
     padding-left: 5px;
 }
-@page  
-{ 
-    size: auto;   /* auto is the initial value */ 
+@page
+{
+    size: auto;   /* auto is the initial value */
 
-    /* this affects the margin in the printer settings */ 
-    margin: .31in .31in .31in .31in;  
+    /* this affects the margin in the printer settings */
+    margin: .31in .31in .31in .31in;
 }
 @media print {
-    
+
     /* Bootstrap clears all background colors when printing so add them back. */
     #report th.header {
         background: rgb(156, 200, 255) !important;
@@ -120,6 +120,7 @@
 
 #report textarea {
     border-radius: 0;
+    resize: vertical;
     -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 10px;
