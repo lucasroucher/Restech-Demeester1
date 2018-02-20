@@ -23,10 +23,12 @@ function normalizeData(study) {
 	   It would probably have been better to figure out what is causing the strange initial supine remnant from the
 	   bad date ( or outside the window date ) problem */
 
+    var theLastDateTime = data[data.length-1].when;
     var lastWhen;
     var whenAdjustment;
 
     console.log('First: ' + firstWhen);
+    console.log('Last : ' + theLastDateTime);
 
     var dataWithGoodDates = data.filter(function(d) {
         var diffFromFirstWhen = Math.abs(d.when.getTime() - firstWhen.getTime());
